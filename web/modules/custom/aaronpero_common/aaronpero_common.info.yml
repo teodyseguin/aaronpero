@@ -1,0 +1,7 @@
+name: Aaronpero Common
+description: 'TBD'
+package: Custom
+type: module
+core: 8.x
+dependencies:
+  - drupal:system (>=8.7.0)
