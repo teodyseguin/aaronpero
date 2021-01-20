@@ -1,8 +1,13 @@
 {
-    "name": "pantheon-systems/example-drops-8-composer",
-    "description": "Install drops-8 with Composer on Pantheon.",
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 8 projects with a relocated document root",
     "type": "project",
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -10,15 +15,44 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
-        "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^8.8.1",
-        "drupal/core-recommended": "^8.8",
         "pantheon-systems/drupal-integrations": "^8",
         "pantheon-systems/quicksilver-pushback": "^2",
-        "drush/drush": "^8.4.5",
-        "cweagans/composer-patches": "^1.7",
-        "drush-ops/behat-drush-endpoint": "^9.3"
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/admin_toolbar": "2.2",
+        "drupal/backup_migrate": "4.1",
+        "drupal/commerce": "2.18",
+        "drupal/core-composer-scaffold": "^8.9",
+        "drupal/core-project-message": "^8.9",
+        "drupal/core-recommended": "^8.9",
+        "drupal/ds": "3.5",
+        "drupal/entity_print": "2.x",
+        "drupal/feeds": "3.0-alpha7",
+        "drupal/feeds_ex": "1.0-alpha3",
+        "drupal/feeds_para_mapper": "1.x-dev",
+        "drupal/feeds_tamper": "2.0-beta1",
+        "drupal/field_group_migrate": "3.0",
+        "drupal/fillpdf": "4.11",
+        "drupal/genpass": "1.0",
+        "drupal/geolocation": "3.1",
+        "drupal/geolocation_google_maps": "3.1",
+        "drupal/google_analytics": "3.0",
+        "drupal/image_class": "1.0.0-beta2",
+        "drupal/metatag": "1.13",
+        "drupal/module_filter": "3.1",
+        "drupal/paragraphs": "1.11",
+        "drupal/pathauto": "1.8",
+        "drupal/recaptcha": "2.5",
+        "drupal/redirect": "1.5",
+        "drupal/redirect_404": "1.5",
+        "drupal/redirect_domain": "1.5",
+        "drupal/select_or_other": "1.0.0-alpha4",
+        "drupal/simple_sitemap": "3.6",
+        "drupal/token": "1.7",
+        "drupal/webform": "5.13",
+        "drupal/youtube": "1.2",
+        "drush/drush": "^10.2",
+        "drush-ops/behat-drush-endpoint": "^9.3",
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -37,48 +71,25 @@
         "symfony/css-selector": "^2.8"
     },
     "conflict": {
-            "drupal/drupal": "*"
+        "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
-    "scripts": {
-        "build-assets": [
-            "@prepare-for-pantheon",
-            "composer install --optimize-autoloader --no-dev"
-        ],
-        "lint": "find web/modules/custom web/themes/custom -name '*.php' -exec php -l {} \\;",
-        "code-sniff": [
-            "./vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/modules/custom",
-            "./vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/themes/custom",
-            "./vendor/bin/phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/modules/custom",
-            "./vendor/bin/phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md --ignore=node_modules,bower_components,vendor ./web/themes/custom"
-        ],
-        "unit-test": "echo 'No unit test step defined.'",
-        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-create-project-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": "source"
     },
     "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+        "patches": {
+            "drupal/feeds": {
+                "Remove timezone on Datetime import": "patches/feeds/remove_timezone_on_import.patch"
+            },
+            "drupal/feeds_para_mapper": {
+                "Error when updating exist entity, adding paragraphs when entity don't have none": "https://www.drupal.org/files/issues/2019-12-26/error_when_updating_exist_entity_adding_paragraphs_when_entity_dont_have_none-3103187-2.patch",
+                "Paragraphs removal": "patches/feeds_para_mapper/paragraphs_removal.patch",
+                "Revision handler issue": "patches/feeds_para_mapper/rev_handler_patch.patch"
+            }
         },
         "build-env": {
             "install-cms": [
@@ -91,19 +102,58 @@
                 "pantheon-systems/drupal-integrations"
             ],
             "locations": {
-                "web-root": "./web"
+                "web-root": "web/"
             },
             "file-mapping": {
                 "[project-root]/.editorconfig": false
             }
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "7.3"
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
         }
     }
 }
