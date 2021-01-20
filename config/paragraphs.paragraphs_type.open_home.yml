@@ -1,0 +1,10 @@
+uuid: 1937270b-2cc4-4216-9201-52034032b4d0
+langcode: en
+status: true
+dependencies: {  }
+id: open_home
+label: 'Open Home'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

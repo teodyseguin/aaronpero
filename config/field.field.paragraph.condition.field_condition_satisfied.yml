@@ -1,0 +1,23 @@
+uuid: 42fc9e87-efc4-40ca-b371-640f0b3955d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_condition_satisfied
+    - paragraphs.paragraphs_type.condition
+  module:
+    - options
+id: paragraph.condition.field_condition_satisfied
+field_name: field_condition_satisfied
+entity_type: paragraph
+bundle: condition
+label: 'Has the condition been satisfied?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: pending
+default_value_callback: ''
+settings: {  }
+field_type: list_string

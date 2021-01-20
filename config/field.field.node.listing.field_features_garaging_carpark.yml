@@ -1,0 +1,19 @@
+uuid: f433f89a-097d-4005-8082-8e6b8e1d6dda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_garaging_carpark
+    - node.type.listing
+id: node.listing.field_features_garaging_carpark
+field_name: field_features_garaging_carpark
+entity_type: node
+bundle: listing
+label: 'Garaging / carparking'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

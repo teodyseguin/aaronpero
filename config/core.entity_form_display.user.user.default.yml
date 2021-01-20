@@ -1,12 +1,18 @@
-uuid: ce1f9fdb-e790-4f40-8b15-87e2a314051a
+uuid: f2e0daac-97a3-4341-93e9-10a0b05b5059
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_displayname
+    - field.field.user.user.field_mobilenumber
+    - field.field.user.user.field_staffid
+    - field.field.user.user.field_webaddress
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - link
+    - telephone
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -20,6 +26,37 @@ content:
     region: content
   contact:
     weight: 5
+    region: content
+  field_displayname:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mobilenumber:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_staffid:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_webaddress:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   language:
     weight: 0

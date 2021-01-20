@@ -1,4 +1,4 @@
-uuid: 0b2f3247-2d1f-42f2-9d04-de96646a7e3b
+uuid: ae52b5ba-0700-46bf-9ea8-aeca17c9615e
 langcode: en
 status: true
 dependencies: {  }
@@ -17,3 +17,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'

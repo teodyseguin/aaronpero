@@ -1,0 +1,19 @@
+uuid: 7e0f4dd9-f712-497b-a2e4-57291cb7116b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_office_name
+    - taxonomy.vocabulary.staff
+id: taxonomy_term.staff.field_office_name
+field_name: field_office_name
+entity_type: taxonomy_term
+bundle: staff
+label: 'Office name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

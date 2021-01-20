@@ -1,0 +1,19 @@
+uuid: e60678dd-840a-43aa-9538-8707da41da1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_condition_title
+    - paragraphs.paragraphs_type.condition
+id: paragraph.condition.field_condition_title
+field_name: field_condition_title
+entity_type: paragraph
+bundle: condition
+label: Condition
+description: 'The title of the condition e.g. Finance, LIM, Subject to Sale'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

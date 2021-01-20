@@ -1,0 +1,7 @@
+uuid: c6554f26-efc5-4a7f-9a6a-16ddbfb5595d
+langcode: en
+status: true
+dependencies: {  }
+id: advert_size
+label: 'Advert Size'
+elementType: select

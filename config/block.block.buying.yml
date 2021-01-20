@@ -1,0 +1,25 @@
+uuid: 7e596116-5c3d-4760-9961-3295bcffaa32
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.buying
+  module:
+    - system
+  theme:
+    - bartik
+id: buying
+theme: bartik
+region: footer_third
+weight: -7
+provider: null
+plugin: 'system_menu_block:buying'
+settings:
+  id: 'system_menu_block:buying'
+  label: Buying
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 3dfc05de-fd34-435e-b3b0-6898db9d4d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_createdatetime
+    - node.type.listing
+  module:
+    - datetime
+id: node.listing.field_createdatetime
+field_name: field_createdatetime
+entity_type: node
+bundle: listing
+label: 'Create Date Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

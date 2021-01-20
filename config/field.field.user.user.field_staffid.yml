@@ -1,0 +1,20 @@
+uuid: 140adb6f-79c7-41cc-a220-dda185aeef7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_staffid
+  module:
+    - user
+id: user.user.field_staffid
+field_name: field_staffid
+entity_type: user
+bundle: user
+label: 'Staff ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

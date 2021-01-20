@@ -1,0 +1,19 @@
+uuid: 71f41a57-7287-4911-99a2-ac7506b60a89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_locality
+    - node.type.listing
+id: node.listing.field_features_locality
+field_name: field_features_locality
+entity_type: node
+bundle: listing
+label: Locality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

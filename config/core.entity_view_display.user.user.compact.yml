@@ -1,9 +1,13 @@
-uuid: 361aee66-f670-4bc2-9f43-6d7474b266fe
+uuid: 670c412d-4693-47b7-9068-c72e34d556a8
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_displayname
+    - field.field.user.user.field_mobilenumber
+    - field.field.user.user.field_staffid
+    - field.field.user.user.field_webaddress
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,4 +30,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_displayname: true
+  field_mobilenumber: true
+  field_staffid: true
+  field_webaddress: true
   member_for: true

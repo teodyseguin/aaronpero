@@ -1,0 +1,21 @@
+uuid: 81b64c60-ad12-4012-8567-2926373dd487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deal_type
+    - node.type.property
+  module:
+    - options
+id: node.property.field_deal_type
+field_name: field_deal_type
+entity_type: node
+bundle: property
+label: 'Deal Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

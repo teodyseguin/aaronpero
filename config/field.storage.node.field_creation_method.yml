@@ -1,0 +1,30 @@
+uuid: e3308460-e2ec-42e6-a02d-7eb565d1029a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_creation_method
+field_name: field_creation_method
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Auto RSS Feed'
+      label: 'Auto RSS Feed'
+    -
+      value: 'Single XML Import'
+      label: 'Single XML Import'
+    -
+      value: Drupal
+      label: Drupal
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

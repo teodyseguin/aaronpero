@@ -1,4 +1,4 @@
-uuid: 42b31ac5-2b75-4ff5-bf0d-dbf795a9ae19
+uuid: 27928306-054b-4124-9025-7ade4286516c
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - teodyseguin@gmail.com
+  - aaron@aaronpero.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

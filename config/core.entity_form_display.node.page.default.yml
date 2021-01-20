@@ -1,9 +1,10 @@
-uuid: 3cfb8c85-90c0-4652-8bf7-143627777632
+uuid: 3c2dc16a-80f3-454c-b896-553142e33d91
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - path
@@ -76,4 +77,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true

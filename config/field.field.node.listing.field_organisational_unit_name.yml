@@ -1,0 +1,19 @@
+uuid: 59b5ac2e-6b96-46d2-b30f-e4bf7a9ceda9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisational_unit_name
+    - node.type.listing
+id: node.listing.field_organisational_unit_name
+field_name: field_organisational_unit_name
+entity_type: node
+bundle: listing
+label: 'Organisational Unit Name'
+description: 'This is typically the office name e.g. Harcourts Halswell'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

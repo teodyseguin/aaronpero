@@ -1,0 +1,24 @@
+uuid: b9e0c1d3-28ad-47ed-a352-bce1b4508634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_expiry
+    - node.type.property
+  module:
+    - datetime
+id: node.property.field_agency_expiry
+field_name: field_agency_expiry
+entity_type: node
+bundle: property
+label: 'Agency Expiry'
+description: 'The date the agency will expire'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+90 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

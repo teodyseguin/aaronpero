@@ -1,0 +1,19 @@
+uuid: 15b355e0-973e-4b79-aead-f03dbf9b8e6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_main_bedroom
+    - node.type.listing
+id: node.listing.field_features_main_bedroom
+field_name: field_features_main_bedroom
+entity_type: node
+bundle: listing
+label: 'Main bedroom'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

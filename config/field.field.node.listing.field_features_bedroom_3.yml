@@ -1,0 +1,19 @@
+uuid: 16273f01-f621-402c-bf25-f412f78a5125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_bedroom_3
+    - node.type.listing
+id: node.listing.field_features_bedroom_3
+field_name: field_features_bedroom_3
+entity_type: node
+bundle: listing
+label: 'Bedroom 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

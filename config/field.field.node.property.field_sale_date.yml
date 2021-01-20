@@ -1,0 +1,21 @@
+uuid: 3fdb0d85-dda9-4dfa-b214-c8c071541829
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sale_date
+    - node.type.property
+  module:
+    - datetime
+id: node.property.field_sale_date
+field_name: field_sale_date
+entity_type: node
+bundle: property
+label: 'Sale Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

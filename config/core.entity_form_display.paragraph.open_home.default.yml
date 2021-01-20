@@ -1,0 +1,39 @@
+uuid: 4ac15eea-e821-475f-868d-a281dac63519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.open_home.field_open_home_end
+    - field.field.paragraph.open_home.field_open_home_id
+    - field.field.paragraph.open_home.field_open_home_start
+    - paragraphs.paragraphs_type.open_home
+  module:
+    - datetime
+id: paragraph.open_home.default
+targetEntityType: paragraph
+bundle: open_home
+mode: default
+content:
+  field_open_home_end:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_open_home_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_open_home_start:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  status: true

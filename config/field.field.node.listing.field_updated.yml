@@ -1,0 +1,21 @@
+uuid: fa2ccb22-f84c-4e0e-9522-5500e9061f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_updated
+    - node.type.listing
+  module:
+    - datetime
+id: node.listing.field_updated
+field_name: field_updated
+entity_type: node
+bundle: listing
+label: Updated
+description: 'The date the listing was last updated in H1'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,19 @@
+uuid: f49f6be8-d654-408b-bf67-e0a13396456c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_office_address
+    - taxonomy.vocabulary.staff
+id: taxonomy_term.staff.field_office_address
+field_name: field_office_address
+entity_type: taxonomy_term
+bundle: staff
+label: 'Office address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

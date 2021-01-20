@@ -1,0 +1,25 @@
+uuid: 110b9075-4daf-45f5-83d9-59ffcedc83d0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c6bc8b4c-4bf9-491a-8903-4007aa30014b'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: contact
+theme: bartik
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:c6bc8b4c-4bf9-491a-8903-4007aa30014b'
+settings:
+  id: 'block_content:c6bc8b4c-4bf9-491a-8903-4007aa30014b'
+  label: Contact
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

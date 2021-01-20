@@ -1,0 +1,8 @@
+uuid: 8f158a9b-368a-4b7c-86df-c1bede9c0fc6
+langcode: en
+status: true
+dependencies: {  }
+id: selling
+label: Selling
+description: ''
+locked: false

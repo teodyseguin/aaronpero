@@ -1,0 +1,221 @@
+uuid: 01dc2b56-7d33-4cd3-b3b4-f2e104020cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing.body
+    - field.field.node.listing.field_bathrooms
+    - field.field.node.listing.field_bedrooms
+    - field.field.node.listing.field_display_price
+    - field.field.node.listing.field_images
+    - field.field.node.listing.field_listing_id
+    - field.field.node.listing.field_listing_number
+    - field.field.node.listing.field_longitude_latitude
+    - field.field.node.listing.field_streetaddress
+    - node.type.listing
+  module:
+    - feeds_ex
+    - geolocation
+    - node
+id: network_listings
+label: 'Network Listings'
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: /feed/entry
+  sources:
+    title:
+      label: title
+      value: title
+    summary:
+      label: summary
+      value: summary
+    listing_listingnumber:
+      label: listing/@listingNumber
+      value: listing/@listingNumber
+    listing_bathrooms:
+      label: listing/@bathrooms
+      value: listing/@bathrooms
+    listing_bedrooms:
+      label: listing/@bedrooms
+      value: listing/@bedrooms
+    listing_displayprice:
+      label: listing/@displayprice
+      value: listing/@displayprice
+    listing_latitude:
+      label: listing/@latitude
+      value: listing/@latitude
+    listing_longitude:
+      label: listing/@longitude
+      value: listing/@longitude
+    listing_streetaddress:
+      label: listing/@streetaddress
+      value: listing/@streetaddress
+    listing_listingid:
+      label: listing/@listingid
+      value: listing/@listingid
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: 604800
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: listing
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  listingnumber:
+    label: listingNumber
+    value: listingNumber
+    machine_name: listingnumber
+  '':
+    label: ''
+    value: ''
+    machine_name: ''
+  _listing_xmlns_https_harcourts_net_listingnumber:
+    label: /listing/listingNumber
+    value: /listing/listingNumber
+    machine_name: _listing_xmlns_https_harcourts_net_listingnumber
+  listing_listingnumber:
+    label: listing/@listingNumber
+    value: listing/@listingNumber
+    machine_name: listing_listingnumber
+  listingnumberfeednetwork:
+    label: listingNumber
+    value: listingNumber
+    machine_name: listingnumberfeednetwork
+  _listing_listingid_:
+    label: listing/@listingid
+    value: listing/@listingid
+    machine_name: _listing_listingid_
+  listing_bathrooms:
+    label: listing/@bathrooms
+    value: listing/@bathrooms
+    machine_name: listing_bathrooms
+  listing_bedrooms:
+    label: listing/@bedrooms
+    value: listing/@bedrooms
+    machine_name: listing_bedrooms
+  listing_displayprice:
+    label: listing/@displayprice
+    value: listing/@displayprice
+    machine_name: listing_displayprice
+  listing_latitude:
+    label: listing/@latitude
+    value: listing/@latitude
+    machine_name: listing_latitude
+  listing_longitude:
+    label: listing/@longitude
+    value: listing/@longitude
+    machine_name: listing_longitude
+  listing_streetaddress:
+    label: listing/@streetaddress
+    value: listing/@streetaddress
+    machine_name: listing_streetaddress
+  listing_listingid:
+    label: listing/@listingid
+    value: listing/@listingid
+    machine_name: listing_listingid
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: summary
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_listing_number
+    map:
+      value: listing_listingnumber
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_bathrooms
+    map:
+      value: listing_bathrooms
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_bedrooms
+    map:
+      value: listing_bedrooms
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_display_price
+    map:
+      value: listing_displayprice
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_longitude_latitude
+    map:
+      lat: listing_latitude
+      lng: listing_longitude
+    settings:
+      language: null
+  -
+    target: field_streetaddress
+    map:
+      value: listing_streetaddress
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_images
+    map:
+      target_id: ''
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: field_listing_id
+    map:
+      value: listing_listingid
+    unique: {  }
+    settings:
+      language: null

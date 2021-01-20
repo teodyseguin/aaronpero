@@ -1,0 +1,19 @@
+uuid: d5006c14-55f6-4b79-a4a1-c489f78fc0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing_id
+    - node.type.listing
+id: node.listing.field_listing_id
+field_name: field_listing_id
+entity_type: node
+bundle: listing
+label: 'Listing ID'
+description: 'The listing ID is a number referenced by the system it is NOT the same as the Listing Number which contains letters.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

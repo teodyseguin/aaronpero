@@ -1,0 +1,19 @@
+uuid: 515d7cf5-9c3c-40dc-b8f4-0aba73b86e87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing_number
+    - node.type.property
+id: node.property.field_listing_number
+field_name: field_listing_number
+entity_type: node
+bundle: property
+label: 'Listing Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 71f800aa-e32c-4977-8b40-e61aa979b63a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_property_type
+    - node.type.listing
+id: node.listing.field_features_property_type
+field_name: field_features_property_type
+entity_type: node
+bundle: listing
+label: 'Property Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

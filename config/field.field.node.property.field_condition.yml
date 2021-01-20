@@ -1,0 +1,31 @@
+uuid: 38e5a2e0-a48f-478f-8746-9ba9c5d52db7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_condition
+    - node.type.property
+    - paragraphs.paragraphs_type.condition
+  module:
+    - entity_reference_revisions
+id: node.property.field_condition
+field_name: field_condition
+entity_type: node
+bundle: property
+label: Condition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      condition: condition
+    target_bundles_drag_drop:
+      condition:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

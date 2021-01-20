@@ -1,0 +1,39 @@
+uuid: 1f179dc9-ba1e-4ca7-9c91-7a526b4dfc38
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_stage
+field_name: field_stage
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Prospect
+      label: Prospect
+    -
+      value: Appraisal
+      label: Appraisal
+    -
+      value: Proposal
+      label: Proposal
+    -
+      value: Preparing
+      label: Preparing
+    -
+      value: Live
+      label: Live
+    -
+      value: Sold
+      label: Sold
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 9b519bf1-12d9-4fcd-86b1-8272b885a678
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.listing
+  module:
+    - text
+id: node.listing.body
+field_name: body
+entity_type: node
+bundle: listing
+label: Body
+description: 'The description of the property - in the XML feed this is referenced as InternetBody'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

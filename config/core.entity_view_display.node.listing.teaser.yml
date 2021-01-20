@@ -1,0 +1,140 @@
+uuid: 12fa6c08-7558-48b2-af69-b0fcd5af848a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.listing.body
+    - field.field.node.listing.feeds_item
+    - field.field.node.listing.field_bathrooms
+    - field.field.node.listing.field_bedrooms
+    - field.field.node.listing.field_carspacesgarage
+    - field.field.node.listing.field_createdatetime
+    - field.field.node.listing.field_creation_method
+    - field.field.node.listing.field_display_price
+    - field.field.node.listing.field_features_approx_floor_area
+    - field.field.node.listing.field_features_approx_year_built
+    - field.field.node.listing.field_features_aspect
+    - field.field.node.listing.field_features_bedroom_2
+    - field.field.node.listing.field_features_bedroom_3
+    - field.field.node.listing.field_features_bedroom_4
+    - field.field.node.listing.field_features_chattelsremaining
+    - field.field.node.listing.field_features_fencing
+    - field.field.node.listing.field_features_fixtures_chatt_ex
+    - field.field.node.listing.field_features_flooring
+    - field.field.node.listing.field_features_garaging_carpark
+    - field.field.node.listing.field_features_grounds
+    - field.field.node.listing.field_features_heating_cooling
+    - field.field.node.listing.field_features_house_style
+    - field.field.node.listing.field_features_insulation
+    - field.field.node.listing.field_features_joinery
+    - field.field.node.listing.field_features_kitchen
+    - field.field.node.listing.field_features_land_contour
+    - field.field.node.listing.field_features_laundry
+    - field.field.node.listing.field_features_living_area
+    - field.field.node.listing.field_features_locality
+    - field.field.node.listing.field_features_main_bathroom
+    - field.field.node.listing.field_features_main_bedroom
+    - field.field.node.listing.field_features_outdoor_living
+    - field.field.node.listing.field_features_property_cond
+    - field.field.node.listing.field_features_property_type
+    - field.field.node.listing.field_features_roof
+    - field.field.node.listing.field_features_sewerage
+    - field.field.node.listing.field_features_tenure
+    - field.field.node.listing.field_features_views
+    - field.field.node.listing.field_features_water_heating
+    - field.field.node.listing.field_features_water_supply
+    - field.field.node.listing.field_floorarea
+    - field.field.node.listing.field_images
+    - field.field.node.listing.field_listing_id
+    - field.field.node.listing.field_listing_number
+    - field.field.node.listing.field_listing_status
+    - field.field.node.listing.field_listing_status_taxonomy
+    - field.field.node.listing.field_longitude_latitude
+    - field.field.node.listing.field_more_details_url
+    - field.field.node.listing.field_open_home
+    - field.field.node.listing.field_organisational_unit_id
+    - field.field.node.listing.field_organisational_unit_name
+    - field.field.node.listing.field_property_link
+    - field.field.node.listing.field_staff
+    - field.field.node.listing.field_streetaddress
+    - field.field.node.listing.field_updated
+    - field.field.node.listing.field_videotoururl
+    - node.type.listing
+  module:
+    - text
+    - user
+id: node.listing.teaser
+targetEntityType: node
+bundle: listing
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_bathrooms: true
+  field_bedrooms: true
+  field_carspacesgarage: true
+  field_createdatetime: true
+  field_creation_method: true
+  field_display_price: true
+  field_features_approx_floor_area: true
+  field_features_approx_year_built: true
+  field_features_aspect: true
+  field_features_bedroom_2: true
+  field_features_bedroom_3: true
+  field_features_bedroom_4: true
+  field_features_chattelsremaining: true
+  field_features_fencing: true
+  field_features_fixtures_chatt_ex: true
+  field_features_flooring: true
+  field_features_garaging_carpark: true
+  field_features_grounds: true
+  field_features_heating_cooling: true
+  field_features_house_style: true
+  field_features_insulation: true
+  field_features_joinery: true
+  field_features_kitchen: true
+  field_features_land_contour: true
+  field_features_laundry: true
+  field_features_living_area: true
+  field_features_locality: true
+  field_features_main_bathroom: true
+  field_features_main_bedroom: true
+  field_features_outdoor_living: true
+  field_features_property_cond: true
+  field_features_property_type: true
+  field_features_roof: true
+  field_features_sewerage: true
+  field_features_tenure: true
+  field_features_views: true
+  field_features_water_heating: true
+  field_features_water_supply: true
+  field_floorarea: true
+  field_images: true
+  field_listing_id: true
+  field_listing_number: true
+  field_listing_status: true
+  field_listing_status_taxonomy: true
+  field_longitude_latitude: true
+  field_more_details_url: true
+  field_open_home: true
+  field_organisational_unit_id: true
+  field_organisational_unit_name: true
+  field_property_link: true
+  field_staff: true
+  field_streetaddress: true
+  field_updated: true
+  field_videotoururl: true

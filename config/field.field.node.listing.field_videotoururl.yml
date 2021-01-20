@@ -1,0 +1,21 @@
+uuid: a99abe9f-d375-4946-80e9-71c2115f5307
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_videotoururl
+    - node.type.listing
+  module:
+    - youtube
+id: node.listing.field_videotoururl
+field_name: field_videotoururl
+entity_type: node
+bundle: listing
+label: Video
+description: 'YouTube video link'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

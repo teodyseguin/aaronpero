@@ -1,0 +1,19 @@
+uuid: e3678ec0-98c6-4cb6-b3ba-64664e1634b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - node
+id: node.field_longitude_latitude
+field_name: field_longitude_latitude
+entity_type: node
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,56 @@
+uuid: 2e6b8d41-a2b7-494f-810f-d21f98165e60
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.property.body
+    - field.field.node.property.feeds_item
+    - field.field.node.property.field_agency_commencement
+    - field.field.node.property.field_agency_expiry
+    - field.field.node.property.field_bathrooms
+    - field.field.node.property.field_bedrooms
+    - field.field.node.property.field_condition
+    - field.field.node.property.field_confirmation_date
+    - field.field.node.property.field_deal_type
+    - field.field.node.property.field_listing
+    - field.field.node.property.field_listing_number
+    - field.field.node.property.field_sale_date
+    - field.field.node.property.field_sale_price
+    - field.field.node.property.field_stage
+    - node.type.property
+  module:
+    - text
+    - user
+id: node.property.teaser
+targetEntityType: node
+bundle: property
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_agency_commencement: true
+  field_agency_expiry: true
+  field_bathrooms: true
+  field_bedrooms: true
+  field_condition: true
+  field_confirmation_date: true
+  field_deal_type: true
+  field_listing: true
+  field_listing_number: true
+  field_sale_date: true
+  field_sale_price: true
+  field_stage: true

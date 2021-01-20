@@ -1,0 +1,20 @@
+uuid: 90d10bad-f768-4377-accc-a906ae1c7c1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_carspacesgarage
+field_name: field_carspacesgarage
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 1
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,85 @@
+uuid: e2b279b6-10ad-405e-8961-8044b58a98b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.property.title
+    - field.field.node.property.field_listing_number
+    - field.field.node.property.field_sale_date
+    - field.field.node.property.field_sale_price
+    - node.type.property
+  module:
+    - node
+id: delete_one_off_import
+label: 'Delete - one off import'
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: TAB
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: property
+custom_sources:
+  listing_number:
+    label: listing_number
+    value: listing_number
+    machine_name: listing_number
+  sale_price:
+    label: sale_price
+    value: sale_price
+    machine_name: sale_price
+  sale_date:
+    label: Sale_date
+    value: Sale_date
+    machine_name: sale_date
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+mappings:
+  -
+    target: field_listing_number
+    map:
+      value: listing_number
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_sale_price
+    map:
+      value: sale_price
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_sale_date
+    map:
+      value: sale_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null

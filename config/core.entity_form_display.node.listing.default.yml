@@ -1,0 +1,613 @@
+uuid: 32a63c21-e8bb-4eb6-9b6d-7bc24a368c3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing.body
+    - field.field.node.listing.feeds_item
+    - field.field.node.listing.field_bathrooms
+    - field.field.node.listing.field_bedrooms
+    - field.field.node.listing.field_carspacesgarage
+    - field.field.node.listing.field_createdatetime
+    - field.field.node.listing.field_creation_method
+    - field.field.node.listing.field_display_price
+    - field.field.node.listing.field_features_approx_floor_area
+    - field.field.node.listing.field_features_approx_year_built
+    - field.field.node.listing.field_features_aspect
+    - field.field.node.listing.field_features_bedroom_2
+    - field.field.node.listing.field_features_bedroom_3
+    - field.field.node.listing.field_features_bedroom_4
+    - field.field.node.listing.field_features_chattelsremaining
+    - field.field.node.listing.field_features_fencing
+    - field.field.node.listing.field_features_fixtures_chatt_ex
+    - field.field.node.listing.field_features_flooring
+    - field.field.node.listing.field_features_garaging_carpark
+    - field.field.node.listing.field_features_grounds
+    - field.field.node.listing.field_features_heating_cooling
+    - field.field.node.listing.field_features_house_style
+    - field.field.node.listing.field_features_insulation
+    - field.field.node.listing.field_features_joinery
+    - field.field.node.listing.field_features_kitchen
+    - field.field.node.listing.field_features_land_contour
+    - field.field.node.listing.field_features_laundry
+    - field.field.node.listing.field_features_living_area
+    - field.field.node.listing.field_features_locality
+    - field.field.node.listing.field_features_main_bathroom
+    - field.field.node.listing.field_features_main_bedroom
+    - field.field.node.listing.field_features_outdoor_living
+    - field.field.node.listing.field_features_property_cond
+    - field.field.node.listing.field_features_property_type
+    - field.field.node.listing.field_features_roof
+    - field.field.node.listing.field_features_sewerage
+    - field.field.node.listing.field_features_tenure
+    - field.field.node.listing.field_features_views
+    - field.field.node.listing.field_features_water_heating
+    - field.field.node.listing.field_features_water_supply
+    - field.field.node.listing.field_floorarea
+    - field.field.node.listing.field_images
+    - field.field.node.listing.field_listing_id
+    - field.field.node.listing.field_listing_number
+    - field.field.node.listing.field_listing_status
+    - field.field.node.listing.field_listing_status_taxonomy
+    - field.field.node.listing.field_longitude_latitude
+    - field.field.node.listing.field_more_details_url
+    - field.field.node.listing.field_open_home
+    - field.field.node.listing.field_organisational_unit_id
+    - field.field.node.listing.field_organisational_unit_name
+    - field.field.node.listing.field_property_link
+    - field.field.node.listing.field_staff
+    - field.field.node.listing.field_streetaddress
+    - field.field.node.listing.field_updated
+    - field.field.node.listing.field_videotoururl
+    - image.style.thumbnail
+    - node.type.listing
+  module:
+    - datetime
+    - field_group
+    - geolocation
+    - image
+    - link
+    - paragraphs
+    - path
+    - text
+    - youtube
+third_party_settings:
+  field_group:
+    group_features:
+      children:
+        - field_features_chattelsremaining
+        - field_features_approx_floor_area
+        - field_features_property_type
+        - field_features_roof
+        - field_features_tenure
+        - field_features_approx_year_built
+        - field_features_house_style
+        - field_features_garaging_carpark
+        - field_features_joinery
+        - field_features_insulation
+        - field_features_flooring
+        - field_features_heating_cooling
+        - field_features_kitchen
+        - field_features_living_area
+        - field_features_main_bedroom
+        - field_features_main_bathroom
+        - field_features_bedroom_2
+        - field_features_bedroom_3
+        - field_features_bedroom_4
+        - field_features_laundry
+        - field_features_views
+        - field_features_aspect
+        - field_features_outdoor_living
+        - field_features_fencing
+        - field_features_land_contour
+        - field_features_grounds
+        - field_features_water_heating
+        - field_features_water_supply
+        - field_features_sewerage
+        - field_features_locality
+        - field_features_fixtures_chatt_ex
+        - field_features_property_cond
+      parent_name: ''
+      weight: 27
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Features
+id: node.listing.default
+targetEntityType: node
+bundle: listing
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bathrooms:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_bedrooms:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_carspacesgarage:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_createdatetime:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_creation_method:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_display_price:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_approx_floor_area:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_approx_year_built:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_aspect:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_bedroom_2:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_bedroom_3:
+    weight: 45
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_bedroom_4:
+    weight: 46
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_chattelsremaining:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_features_fencing:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_fixtures_chatt_ex:
+    weight: 58
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_flooring:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_garaging_carpark:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_grounds:
+    weight: 53
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_heating_cooling:
+    weight: 39
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_house_style:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_insulation:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_joinery:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_kitchen:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_land_contour:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_laundry:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_living_area:
+    weight: 41
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_locality:
+    weight: 57
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_main_bathroom:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_main_bedroom:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_outdoor_living:
+    weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_property_cond:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_property_type:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_roof:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_sewerage:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_tenure:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_views:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_water_heating:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_features_water_supply:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_floorarea:
+    weight: 20
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_images:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_listing_id:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_listing_number:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_listing_status:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_listing_status_taxonomy:
+    weight: 62
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_longitude_latitude:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_more_details_url:
+    weight: 17
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_open_home:
+    type: entity_reference_paragraphs
+    weight: 61
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_organisational_unit_id:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organisational_unit_name:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_property_link:
+    weight: 60
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_staff:
+    weight: 63
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_streetaddress:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_updated:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_videotoururl:
+    weight: 23
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+    type: youtube
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feeds_item: true

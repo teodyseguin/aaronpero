@@ -1,0 +1,29 @@
+uuid: 7e96b054-021d-44b9-a273-c6f3a83b0a98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing
+    - node.type.listing
+    - node.type.property
+id: node.property.field_listing
+field_name: field_listing
+entity_type: node
+bundle: property
+label: Listing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      listing: listing
+    sort:
+      field: field_listing_number
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 9a3239a5-f21e-498a-933d-fb6393ca61f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing
+    - node.type.listing
+    - node.type.testimonial
+id: node.testimonial.field_listing
+field_name: field_listing
+entity_type: node
+bundle: testimonial
+label: Listing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      listing: listing
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: ffdeac4e-c2b0-4c38-82c0-40f9184f1d3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_roof
+    - node.type.listing
+id: node.listing.field_features_roof
+field_name: field_features_roof
+entity_type: node
+bundle: listing
+label: Roof
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

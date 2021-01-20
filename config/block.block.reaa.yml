@@ -1,0 +1,25 @@
+uuid: be8cc43b-5da0-455a-b956-9376a4a64f15
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:60c55427-9d5b-4af3-b0b6-8963adea7fcc'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: reaa
+theme: bartik
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:60c55427-9d5b-4af3-b0b6-8963adea7fcc'
+settings:
+  id: 'block_content:60c55427-9d5b-4af3-b0b6-8963adea7fcc'
+  label: REAA
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

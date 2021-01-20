@@ -1,0 +1,25 @@
+uuid: baf48036-6b46-46e2-9b50-a7ceead66bf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.selling
+  module:
+    - system
+  theme:
+    - bartik
+id: selling
+theme: bartik
+region: footer_second
+weight: -8
+provider: null
+plugin: 'system_menu_block:selling'
+settings:
+  id: 'system_menu_block:selling'
+  label: Selling
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 09dd914d-d114-410b-9816-00259ef57e46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stage
+    - node.type.property
+  module:
+    - options
+id: node.property.field_stage
+field_name: field_stage
+entity_type: node
+bundle: property
+label: Stage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

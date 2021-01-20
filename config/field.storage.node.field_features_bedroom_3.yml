@@ -1,0 +1,21 @@
+uuid: 063fb98f-839c-41f1-9ea3-ecbf48a6fc26
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_features_bedroom_3
+field_name: field_features_bedroom_3
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

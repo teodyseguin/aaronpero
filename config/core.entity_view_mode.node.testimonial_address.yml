@@ -1,0 +1,10 @@
+uuid: b49851d5-7eb3-4ec5-805f-4685c7e7dea3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.testimonial_address
+label: 'Testimonial Address'
+targetEntityType: node
+cache: true

@@ -1,0 +1,23 @@
+uuid: f9671f38-2c43-41c3-acd0-f404800e2ef5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bathrooms
+    - node.type.property
+id: node.property.field_bathrooms
+field_name: field_bathrooms
+entity_type: node
+bundle: property
+label: Bathrooms
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

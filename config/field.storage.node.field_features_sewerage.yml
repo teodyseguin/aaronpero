@@ -1,0 +1,21 @@
+uuid: 62c280cd-8c48-49a7-a9f1-4657c640226e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_features_sewerage
+field_name: field_features_sewerage
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: dc35d618-377b-47b6-a5a2-0cb260a30af3
+langcode: en
+status: true
+dependencies: {  }
+id: buying
+label: Buying
+description: ''
+locked: false

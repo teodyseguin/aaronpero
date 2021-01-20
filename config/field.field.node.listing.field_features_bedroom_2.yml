@@ -1,0 +1,19 @@
+uuid: c6d21d3d-be1a-4c4a-8853-78e9f6a62c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_bedroom_2
+    - node.type.listing
+id: node.listing.field_features_bedroom_2
+field_name: field_features_bedroom_2
+entity_type: node
+bundle: listing
+label: 'Bedroom 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

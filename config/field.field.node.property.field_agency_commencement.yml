@@ -1,0 +1,24 @@
+uuid: f84d1353-0579-4488-b899-73ca4ce03e02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_commencement
+    - node.type.property
+  module:
+    - datetime
+id: node.property.field_agency_commencement
+field_name: field_agency_commencement
+entity_type: node
+bundle: property
+label: 'Agency Commencement'
+description: 'The date the agency commenced.'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

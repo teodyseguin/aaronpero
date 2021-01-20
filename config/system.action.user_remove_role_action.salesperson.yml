@@ -1,0 +1,14 @@
+uuid: af309276-ca74-427e-92e2-ee06d65daa17
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.salesperson
+  module:
+    - user
+id: user_remove_role_action.salesperson
+label: 'Remove the Salesperson role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: salesperson

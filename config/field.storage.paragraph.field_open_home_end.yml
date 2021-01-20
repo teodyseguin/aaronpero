@@ -1,0 +1,20 @@
+uuid: 6fd5acc7-cbee-450f-af5f-968d30d9f1e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_open_home_end
+field_name: field_open_home_end
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

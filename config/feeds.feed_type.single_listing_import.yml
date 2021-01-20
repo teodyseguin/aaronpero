@@ -1,0 +1,939 @@
+uuid: 876f80ce-eecc-4549-a9b7-95ba1eb3253d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing.body
+    - field.field.node.listing.field_bathrooms
+    - field.field.node.listing.field_bedrooms
+    - field.field.node.listing.field_carspacesgarage
+    - field.field.node.listing.field_creation_method
+    - field.field.node.listing.field_display_price
+    - field.field.node.listing.field_features_approx_floor_area
+    - field.field.node.listing.field_features_approx_year_built
+    - field.field.node.listing.field_features_aspect
+    - field.field.node.listing.field_features_bedroom_2
+    - field.field.node.listing.field_features_bedroom_3
+    - field.field.node.listing.field_features_bedroom_4
+    - field.field.node.listing.field_features_chattelsremaining
+    - field.field.node.listing.field_features_fencing
+    - field.field.node.listing.field_features_fixtures_chatt_ex
+    - field.field.node.listing.field_features_flooring
+    - field.field.node.listing.field_features_garaging_carpark
+    - field.field.node.listing.field_features_grounds
+    - field.field.node.listing.field_features_heating_cooling
+    - field.field.node.listing.field_features_house_style
+    - field.field.node.listing.field_features_insulation
+    - field.field.node.listing.field_features_joinery
+    - field.field.node.listing.field_features_kitchen
+    - field.field.node.listing.field_features_land_contour
+    - field.field.node.listing.field_features_laundry
+    - field.field.node.listing.field_features_living_area
+    - field.field.node.listing.field_features_locality
+    - field.field.node.listing.field_features_main_bathroom
+    - field.field.node.listing.field_features_main_bedroom
+    - field.field.node.listing.field_features_outdoor_living
+    - field.field.node.listing.field_features_property_cond
+    - field.field.node.listing.field_features_property_type
+    - field.field.node.listing.field_features_roof
+    - field.field.node.listing.field_features_sewerage
+    - field.field.node.listing.field_features_tenure
+    - field.field.node.listing.field_features_views
+    - field.field.node.listing.field_features_water_heating
+    - field.field.node.listing.field_features_water_supply
+    - field.field.node.listing.field_floorarea
+    - field.field.node.listing.field_images
+    - field.field.node.listing.field_listing_id
+    - field.field.node.listing.field_listing_number
+    - field.field.node.listing.field_listing_status
+    - field.field.node.listing.field_listing_status_taxonomy
+    - field.field.node.listing.field_longitude_latitude
+    - field.field.node.listing.field_more_details_url
+    - field.field.node.listing.field_open_home
+    - field.field.node.listing.field_organisational_unit_id
+    - field.field.node.listing.field_organisational_unit_name
+    - field.field.node.listing.field_property_link
+    - field.field.node.listing.field_staff
+    - field.field.node.listing.field_streetaddress
+    - field.field.paragraph.open_home.field_open_home_end
+    - field.field.paragraph.open_home.field_open_home_id
+    - field.field.paragraph.open_home.field_open_home_start
+    - node.type.listing
+  module:
+    - aaronpero_common
+    - feeds_para_mapper
+    - feeds_tamper
+    - geolocation
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers: {  }
+id: single_listing_import
+label: 'Single listing import'
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: custom_xml_single
+parser_configuration:
+  context:
+    value: /Listing
+  sources:
+    internetheading:
+      label: InternetHeading
+      value: InternetHeading
+    internetbody:
+      label: InternetBody
+      value: InternetBody
+    listingid:
+      label: ListingID
+      value: ListingID
+    listingnumber:
+      label: ListingNumber
+      value: ListingNumber
+    streetaddress:
+      label: StreetAddress
+      value: StreetAddress
+    latitude:
+      label: Latitude
+      value: Latitude
+    longitude:
+      label: Longitude
+      value: Longitude
+    bathrooms:
+      label: Bathrooms
+      value: Bathrooms
+    bedrooms:
+      label: Bedrooms
+      value: Bedrooms
+    carspacesgarage:
+      label: CarSpacesGarage
+      value: CarSpacesGarage
+    displayprice:
+      label: DisplayPrice
+      value: DisplayPrice
+    moredetailsurl:
+      label: MoreDetailsUrl
+      value: MoreDetailsUrl
+    organisationalunitname:
+      label: OrganisationalUnitName
+      value: OrganisationalUnitName
+    organisationalunitid:
+      label: OrganisationalUnitID
+      value: OrganisationalUnitID
+    floorarea:
+      label: FloorArea
+      value: FloorArea
+    images_image_largephotourl:
+      label: Images/Image/LargePhotoUrl
+      value: Images/Image/LargePhotoUrl
+    images_image_description:
+      label: Images/Image/Description
+      value: Images/Image/Description
+    images_image_imageid:
+      label: Images/Image/ImageID
+      value: Images/Image/ImageID
+    attributedata_features_feature_chattels:
+      label: AttributeData/Features/Feature/Chattels
+      value: AttributeData/Features/Feature/Chattels
+    attributedata_features_feature_chattels_approxfloorarea:
+      label: AttributeData/Features/Feature/Chattels/ApproxFloorArea
+      value: AttributeData/Features/Feature/Chattels/ApproxFloorArea
+    attributedata_features_feature_propertytype:
+      label: AttributeData/Features/Feature/PropertyType
+      value: AttributeData/Features/Feature/PropertyType
+    attributedata_features_feature_roof:
+      label: AttributeData/Features/Feature/Roof
+      value: AttributeData/Features/Feature/Roof
+    attributedata_features_feature_tenure:
+      label: AttributeData/Features/Feature/Tenure
+      value: AttributeData/Features/Feature/Tenure
+    attributedata_features_feature_yearbuilt:
+      label: AttributeData/Features/Feature/YearBuilt
+      value: AttributeData/Features/Feature/YearBuilt
+    attributedata_features_feature_housestyle:
+      label: AttributeData/Features/Feature/HouseStyle
+      value: AttributeData/Features/Feature/HouseStyle
+    attributedata_features_feature_garagingcarpark:
+      label: AttributeData/Features/Feature/GaragingCarpark
+      value: AttributeData/Features/Feature/GaragingCarpark
+    attributedata_features_feature_joinery:
+      label: AttributeData/Features/Feature/Joinery
+      value: AttributeData/Features/Feature/Joinery
+    attributedata_features_feature_insulation:
+      label: AttributeData/Features/Feature/Insulation
+      value: AttributeData/Features/Feature/Insulation
+    attributedata_features_feature_flooring:
+      label: AttributeData/Features/Feature/Flooring
+      value: AttributeData/Features/Feature/Flooring
+    attributedata_features_feature_heatingcooling:
+      label: AttributeData/Features/Feature/HeatingCooling
+      value: AttributeData/Features/Feature/HeatingCooling
+    attributedata_features_feature_kitchen:
+      label: AttributeData/Features/Feature/Kitchen
+      value: AttributeData/Features/Feature/Kitchen
+    attributedata_features_feature_livingarea:
+      label: AttributeData/Features/Feature/LivingArea
+      value: AttributeData/Features/Feature/LivingArea
+    attributedata_features_feature_mainbedroom:
+      label: AttributeData/Features/Feature/MainBedroom
+      value: AttributeData/Features/Feature/MainBedroom
+    attributedata_features_feature_mainbathroom:
+      label: AttributeData/Features/Feature/MainBathroom
+      value: AttributeData/Features/Feature/MainBathroom
+    attributedata_features_feature_bedroom2:
+      label: AttributeData/Features/Feature/Bedroom2
+      value: AttributeData/Features/Feature/Bedroom2
+    attributedata_features_feature_bedroom3:
+      label: AttributeData/Features/Feature/Bedroom3
+      value: AttributeData/Features/Feature/Bedroom3
+    attributedata_features_feature_bedroom4:
+      label: AttributeData/Features/Feature/Bedroom4
+      value: AttributeData/Features/Feature/Bedroom4
+    attributedata_features_feature_laundry:
+      label: AttributeData/Features/Feature/Laundry
+      value: AttributeData/Features/Feature/Laundry
+    attributedata_features_feature_views:
+      label: AttributeData/Features/Feature/Views
+      value: AttributeData/Features/Feature/Views
+    attributedata_features_feature_aspect:
+      label: AttributeData/Features/Feature/Aspect
+      value: AttributeData/Features/Feature/Aspect
+    attributedata_features_feature_outdoorliving:
+      label: AttributeData/Features/Feature/OutdoorLiving
+      value: AttributeData/Features/Feature/OutdoorLiving
+    attributedata_features_feature_fencing:
+      label: AttributeData/Features/Feature/Fencing
+      value: AttributeData/Features/Feature/Fencing
+    attributedata_features_feature_landcontour:
+      label: AttributeData/Features/Feature/LandContour
+      value: AttributeData/Features/Feature/LandContour
+    attributedata_features_feature_grounds:
+      label: AttributeData/Features/Feature/Grounds
+      value: AttributeData/Features/Feature/Grounds
+    attributedata_features_feature_waterheating:
+      label: AttributeData/Features/Feature/WaterHeating
+      value: AttributeData/Features/Feature/WaterHeating
+    attributedata_features_feature_watersupply:
+      label: AttributeData/Features/Feature/WaterSupply
+      value: AttributeData/Features/Feature/WaterSupply
+    attributedata_features_feature_sewerage:
+      label: AttributeData/Features/Feature/Sewerage
+      value: AttributeData/Features/Feature/Sewerage
+    attributedata_features_feature_locality:
+      label: AttributeData/Features/Feature/Locality
+      value: AttributeData/Features/Feature/Locality
+    attributedata_features_feature_fixtureschattels:
+      label: AttributeData/Features/Feature/FixturesChattels
+      value: AttributeData/Features/Feature/FixturesChattels
+    attributedata_features_feature_propertycondition:
+      label: AttributeData/Features/Feature/PropertyCondition
+      value: AttributeData/Features/Feature/PropertyCondition
+    listingstatus:
+      label: ListingStatus
+      value: ListingStatus
+    creationmethod:
+      label: CreationMethod
+      value: CreationMethod
+    propertylink:
+      label: PropertyLink
+      value: PropertyLink
+    openhomes_openhome_openhomeid:
+      label: OpenHomes/OpenHome/OpenHomeID
+      value: OpenHomes/OpenHome/OpenHomeID
+    openhomes_openhome_startdatetimenonutc:
+      label: OpenHomes/OpenHome/StartDateTimeNonUtc
+      value: OpenHomes/OpenHome/StartDateTimeNonUtc
+    openhomes_openhome_enddatetimenonutc:
+      label: OpenHomes/OpenHome/EndDateTimeNonUtc
+      value: OpenHomes/OpenHome/EndDateTimeNonUtc
+    listingstaff_staff_displayname:
+      label: ListingStaff/Staff/DisplayName
+      value: ListingStaff/Staff/DisplayName
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: 3600
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: true
+  values:
+    type: listing
+custom_sources:
+  internetheading:
+    label: InternetHeading
+    value: InternetHeading
+    machine_name: internetheading
+  internetbody:
+    label: InternetBody
+    value: InternetBody
+    machine_name: internetbody
+  listingid:
+    label: ListingID
+    value: ListingID
+    machine_name: listingid
+  listingnumber:
+    label: ListingNumber
+    value: ListingNumber
+    machine_name: listingnumber
+  listingaddress_streetaddress:
+    label: ListingAddress/StreetAddress
+    value: ListingAddress/StreetAddress
+    machine_name: listingaddress_streetaddress
+  streetaddress:
+    label: StreetAddress
+    value: StreetAddress
+    machine_name: streetaddress
+  latitude:
+    label: Latitude
+    value: Latitude
+    machine_name: latitude
+  longitude:
+    label: Longitude
+    value: Longitude
+    machine_name: longitude
+  bathrooms:
+    label: Bathrooms
+    value: Bathrooms
+    machine_name: bathrooms
+  bedrooms:
+    label: Bedrooms
+    value: Bedrooms
+    machine_name: bedrooms
+  carspacesgarage:
+    label: CarSpacesGarage
+    value: CarSpacesGarage
+    machine_name: carspacesgarage
+  displayprice:
+    label: DisplayPrice
+    value: DisplayPrice
+    machine_name: displayprice
+  moredetailsurl:
+    label: MoreDetailsUrl
+    value: MoreDetailsUrl
+    machine_name: moredetailsurl
+  organisationalunitname:
+    label: OrganisationalUnitName
+    value: OrganisationalUnitName
+    machine_name: organisationalunitname
+  organisationalunitid:
+    label: OrganisationalUnitID
+    value: OrganisationalUnitID
+    machine_name: organisationalunitid
+  floorarea:
+    label: FloorArea
+    value: FloorArea
+    machine_name: floorarea
+  image_largephotourl:
+    label: Image/LargePhotoUrl
+    value: Image/LargePhotoUrl
+    machine_name: image_largephotourl
+  images_image_largephotourl:
+    label: Images/Image/LargePhotoUrl
+    value: Images/Image/LargePhotoUrl
+    machine_name: images_image_largephotourl
+  images_image:
+    label: Images/Image
+    value: Images/Image
+    machine_name: images_image
+  listing_internetheading:
+    label: Listing/InternetHeading
+    value: Listing/InternetHeading
+    machine_name: listing_internetheading
+  listing_internetbody:
+    label: Listing/InternetBody
+    value: Listing/InternetBody
+    machine_name: listing_internetbody
+  listing_listingid:
+    label: Listing/ListingID
+    value: Listing/ListingID
+    machine_name: listing_listingid
+  linsting_listingnumber:
+    label: Linsting/ListingNumber
+    value: Linsting/ListingNumber
+    machine_name: linsting_listingnumber
+  listing_streetaddress:
+    label: Listing/StreetAddress
+    value: Listing/StreetAddress
+    machine_name: listing_streetaddress
+  attributedata_features_feature:
+    label: AttributeData/Features/Feature
+    value: AttributeData/Features/Feature
+    machine_name: attributedata_features_feature
+  attributedata_features_feature_chattels:
+    label: AttributeData/Features/Feature/Chattels
+    value: AttributeData/Features/Feature/Chattels
+    machine_name: attributedata_features_feature_chattels
+  attributedata_features_feature_chattels_approxfloorarea:
+    label: AttributeData/Features/Feature/Chattels/ApproxFloorArea
+    value: AttributeData/Features/Feature/Chattels/ApproxFloorArea
+    machine_name: attributedata_features_feature_chattels_approxfloorarea
+  attributedata_features_feature_propertytype:
+    label: AttributeData/Features/Feature/PropertyType
+    value: AttributeData/Features/Feature/PropertyType
+    machine_name: attributedata_features_feature_propertytype
+  attributedata_features_feature_roof:
+    label: AttributeData/Features/Feature/Roof
+    value: AttributeData/Features/Feature/Roof
+    machine_name: attributedata_features_feature_roof
+  attributedata_features_feature_tenure:
+    label: AttributeData/Features/Feature/Tenure
+    value: AttributeData/Features/Feature/Tenure
+    machine_name: attributedata_features_feature_tenure
+  attributedata_features_feature_yearbuilt:
+    label: AttributeData/Features/Feature/YearBuilt
+    value: AttributeData/Features/Feature/YearBuilt
+    machine_name: attributedata_features_feature_yearbuilt
+  attributedata_features_feature_housestyle:
+    label: AttributeData/Features/Feature/HouseStyle
+    value: AttributeData/Features/Feature/HouseStyle
+    machine_name: attributedata_features_feature_housestyle
+  attributedata_features_feature_garagingcarpark:
+    label: AttributeData/Features/Feature/GaragingCarpark
+    value: AttributeData/Features/Feature/GaragingCarpark
+    machine_name: attributedata_features_feature_garagingcarpark
+  attributedata_features_feature_joinery:
+    label: AttributeData/Features/Feature/Joinery
+    value: AttributeData/Features/Feature/Joinery
+    machine_name: attributedata_features_feature_joinery
+  attributedata_features_feature_insulation:
+    label: AttributeData/Features/Feature/Insulation
+    value: AttributeData/Features/Feature/Insulation
+    machine_name: attributedata_features_feature_insulation
+  attributedata_features_feature_flooring:
+    label: AttributeData/Features/Feature/Flooring
+    value: AttributeData/Features/Feature/Flooring
+    machine_name: attributedata_features_feature_flooring
+  attributedata_features_feature_heatingcooling:
+    label: AttributeData/Features/Feature/HeatingCooling
+    value: AttributeData/Features/Feature/HeatingCooling
+    machine_name: attributedata_features_feature_heatingcooling
+  attributedata_features_feature_kitchen:
+    label: AttributeData/Features/Feature/Kitchen
+    value: AttributeData/Features/Feature/Kitchen
+    machine_name: attributedata_features_feature_kitchen
+  attributedata_features_feature_livingarea:
+    label: AttributeData/Features/Feature/LivingArea
+    value: AttributeData/Features/Feature/LivingArea
+    machine_name: attributedata_features_feature_livingarea
+  attributedata_features_feature_mainbedroom:
+    label: AttributeData/Features/Feature/MainBedroom
+    value: AttributeData/Features/Feature/MainBedroom
+    machine_name: attributedata_features_feature_mainbedroom
+  attributedata_features_feature_mainbathroom:
+    label: AttributeData/Features/Feature/MainBathroom
+    value: AttributeData/Features/Feature/MainBathroom
+    machine_name: attributedata_features_feature_mainbathroom
+  attributedata_features_feature_bedroom2:
+    label: AttributeData/Features/Feature/Bedroom2
+    value: AttributeData/Features/Feature/Bedroom2
+    machine_name: attributedata_features_feature_bedroom2
+  attributedata_features_feature_bedroom3:
+    label: AttributeData/Features/Feature/Bedroom3
+    value: AttributeData/Features/Feature/Bedroom3
+    machine_name: attributedata_features_feature_bedroom3
+  attributedata_features_feature_bedroom4:
+    label: AttributeData/Features/Feature/Bedroom4
+    value: AttributeData/Features/Feature/Bedroom4
+    machine_name: attributedata_features_feature_bedroom4
+  attributedata_features_feature_laundry:
+    label: AttributeData/Features/Feature/Laundry
+    value: AttributeData/Features/Feature/Laundry
+    machine_name: attributedata_features_feature_laundry
+  attributedata_features_feature_views:
+    label: AttributeData/Features/Feature/Views
+    value: AttributeData/Features/Feature/Views
+    machine_name: attributedata_features_feature_views
+  attributedata_features_feature_aspect:
+    label: AttributeData/Features/Feature/Aspect
+    value: AttributeData/Features/Feature/Aspect
+    machine_name: attributedata_features_feature_aspect
+  attributedata_features_feature_outdoorliving:
+    label: AttributeData/Features/Feature/OutdoorLiving
+    value: AttributeData/Features/Feature/OutdoorLiving
+    machine_name: attributedata_features_feature_outdoorliving
+  attributedata_features_feature_fencing:
+    label: AttributeData/Features/Feature/Fencing
+    value: AttributeData/Features/Feature/Fencing
+    machine_name: attributedata_features_feature_fencing
+  attributedata_features_feature_landcontour:
+    label: AttributeData/Features/Feature/LandContour
+    value: AttributeData/Features/Feature/LandContour
+    machine_name: attributedata_features_feature_landcontour
+  attributedata_features_feature_grounds:
+    label: AttributeData/Features/Feature/Grounds
+    value: AttributeData/Features/Feature/Grounds
+    machine_name: attributedata_features_feature_grounds
+  attributedata_features_feature_waterheating:
+    label: AttributeData/Features/Feature/WaterHeating
+    value: AttributeData/Features/Feature/WaterHeating
+    machine_name: attributedata_features_feature_waterheating
+  attributedata_features_feature_watersupply:
+    label: AttributeData/Features/Feature/WaterSupply
+    value: AttributeData/Features/Feature/WaterSupply
+    machine_name: attributedata_features_feature_watersupply
+  attributedata_features_feature_sewerage:
+    label: AttributeData/Features/Feature/Sewerage
+    value: AttributeData/Features/Feature/Sewerage
+    machine_name: attributedata_features_feature_sewerage
+  attributedata_features_feature_locality:
+    label: AttributeData/Features/Feature/Locality
+    value: AttributeData/Features/Feature/Locality
+    machine_name: attributedata_features_feature_locality
+  attributedata_features_feature_fixtureschattels:
+    label: AttributeData/Features/Feature/FixturesChattels
+    value: AttributeData/Features/Feature/FixturesChattels
+    machine_name: attributedata_features_feature_fixtureschattels
+  attributedata_features_feature_propertycondition:
+    label: AttributeData/Features/Feature/PropertyCondition
+    value: AttributeData/Features/Feature/PropertyCondition
+    machine_name: attributedata_features_feature_propertycondition
+  attributedata_features_feature_:
+    label: AttributeData/Features/Feature/
+    value: AttributeData/Features/Feature/
+    machine_name: attributedata_features_feature_
+  listingstatus:
+    label: ListingStatus
+    value: ListingStatus
+    machine_name: listingstatus
+  creationmethod:
+    label: CreationMethod
+    value: CreationMethod
+    machine_name: creationmethod
+  propertylink:
+    label: PropertyLink
+    value: PropertyLink
+    machine_name: propertylink
+  openhomes_openhome_openhomeid:
+    label: OpenHomes/OpenHome/OpenHomeID
+    value: OpenHomes/OpenHome/OpenHomeID
+    machine_name: openhomes_openhome_openhomeid
+  openhomes_openhome_startdatetimenonutc:
+    label: OpenHomes/OpenHome/StartDateTimeNonUtc
+    value: OpenHomes/OpenHome/StartDateTimeNonUtc
+    machine_name: openhomes_openhome_startdatetimenonutc
+  openhomes_openhome_enddatetimenonutc:
+    label: OpenHomes/OpenHome/EndDateTimeNonUtc
+    value: OpenHomes/OpenHome/EndDateTimeNonUtc
+    machine_name: openhomes_openhome_enddatetimenonutc
+  images_image_isfloorplan:
+    label: Images/Image/IsFloorPlan
+    value: Images/Image/IsFloorPlan
+    machine_name: images_image_isfloorplan
+  images_image_imageid:
+    label: Images/Image/ImageID
+    value: Images/Image/ImageID
+    machine_name: images_image_imageid
+  images_image_description:
+    label: Images/Image/Description
+    value: Images/Image/Description
+    machine_name: images_image_description
+  listingstaff_staff_displayname:
+    label: ListingStaff/Staff/DisplayName
+    value: ListingStaff/Staff/DisplayName
+    machine_name: listingstaff_staff_displayname
+mappings:
+  -
+    target: title
+    map:
+      value: internetheading
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: internetbody
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_listing_id
+    map:
+      value: listingid
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_listing_number
+    map:
+      value: listingnumber
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_streetaddress
+    map:
+      value: streetaddress
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_longitude_latitude
+    map:
+      lat: latitude
+      lng: longitude
+    settings:
+      language: null
+  -
+    target: field_bathrooms
+    map:
+      value: bathrooms
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_bedrooms
+    map:
+      value: bedrooms
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_carspacesgarage
+    map:
+      value: carspacesgarage
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_display_price
+    map:
+      value: displayprice
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_more_details_url
+    map:
+      uri: moredetailsurl
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_organisational_unit_name
+    map:
+      value: organisationalunitname
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_organisational_unit_id
+    map:
+      value: organisationalunitid
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_floorarea
+    map:
+      value: floorarea
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_images
+    map:
+      target_id: images_image_largephotourl
+      alt: images_image_description
+      title: images_image_imageid
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_features_chattelsremaining
+    map:
+      value: attributedata_features_feature_chattels
+    settings:
+      language: null
+  -
+    target: field_features_approx_floor_area
+    map:
+      value: attributedata_features_feature_chattels_approxfloorarea
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_property_type
+    map:
+      value: attributedata_features_feature_propertytype
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_roof
+    map:
+      value: attributedata_features_feature_roof
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_tenure
+    map:
+      value: attributedata_features_feature_tenure
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_approx_year_built
+    map:
+      value: attributedata_features_feature_yearbuilt
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_house_style
+    map:
+      value: attributedata_features_feature_housestyle
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_garaging_carpark
+    map:
+      value: attributedata_features_feature_garagingcarpark
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_joinery
+    map:
+      value: attributedata_features_feature_joinery
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_insulation
+    map:
+      value: attributedata_features_feature_insulation
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_flooring
+    map:
+      value: attributedata_features_feature_flooring
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_heating_cooling
+    map:
+      value: attributedata_features_feature_heatingcooling
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_kitchen
+    map:
+      value: attributedata_features_feature_kitchen
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_living_area
+    map:
+      value: attributedata_features_feature_livingarea
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_main_bedroom
+    map:
+      value: attributedata_features_feature_mainbedroom
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_main_bathroom
+    map:
+      value: attributedata_features_feature_mainbathroom
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_bedroom_2
+    map:
+      value: attributedata_features_feature_bedroom2
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_bedroom_3
+    map:
+      value: attributedata_features_feature_bedroom3
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_bedroom_4
+    map:
+      value: attributedata_features_feature_bedroom4
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_laundry
+    map:
+      value: attributedata_features_feature_laundry
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_views
+    map:
+      value: attributedata_features_feature_views
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_aspect
+    map:
+      value: attributedata_features_feature_aspect
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_outdoor_living
+    map:
+      value: attributedata_features_feature_outdoorliving
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_fencing
+    map:
+      value: attributedata_features_feature_fencing
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_land_contour
+    map:
+      value: attributedata_features_feature_landcontour
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_grounds
+    map:
+      value: attributedata_features_feature_grounds
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_water_heating
+    map:
+      value: attributedata_features_feature_waterheating
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_water_supply
+    map:
+      value: attributedata_features_feature_watersupply
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_sewerage
+    map:
+      value: attributedata_features_feature_sewerage
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_locality
+    map:
+      value: attributedata_features_feature_locality
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_fixtures_chatt_ex
+    map:
+      value: attributedata_features_feature_fixtureschattels
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_features_property_cond
+    map:
+      value: attributedata_features_feature_propertycondition
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_listing_status
+    map:
+      value: listingstatus
+    settings:
+      language: null
+  -
+    target: field_creation_method
+    map:
+      value: creationmethod
+    settings:
+      language: null
+  -
+    target: field_property_link
+    map:
+      uri: propertylink
+      title: ''
+    settings:
+      language: null
+  -
+    target: open_home_field_open_home_id
+    map:
+      value: openhomes_openhome_openhomeid
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: open_home_field_open_home_start
+    map:
+      value: openhomes_openhome_startdatetimenonutc
+    settings:
+      language: ''
+      timezone: Pacific/Auckland
+  -
+    target: open_home_field_open_home_end
+    map:
+      value: openhomes_openhome_enddatetimenonutc
+    settings:
+      language: ''
+      timezone: Pacific/Auckland
+  -
+    target: field_listing_status_taxonomy
+    map:
+      target_id: listingstatus
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: field_staff
+    map:
+      target_id: listingstaff_staff_displayname
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false

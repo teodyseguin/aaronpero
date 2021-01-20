@@ -1,0 +1,19 @@
+uuid: 93067ff9-7bed-4c70-a67b-85bc1a5c7c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_insulation
+    - node.type.listing
+id: node.listing.field_features_insulation
+field_name: field_features_insulation
+entity_type: node
+bundle: listing
+label: Insulation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

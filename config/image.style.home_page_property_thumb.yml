@@ -1,0 +1,15 @@
+uuid: 3b504a9d-77b7-4b33-8ec2-e5f17766bdbf
+langcode: en
+status: true
+dependencies: {  }
+name: home_page_property_thumb
+label: 'Home Page Property Thumb'
+effects:
+  7b0a3930-5578-4ea5-87f8-bdce65052051:
+    uuid: 7b0a3930-5578-4ea5-87f8-bdce65052051
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 390
+      height: 340
+      anchor: center-center

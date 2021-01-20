@@ -1,0 +1,21 @@
+uuid: 994413b5-5a84-4070-bb6b-1f731f8182af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_open_home_end
+    - paragraphs.paragraphs_type.open_home
+  module:
+    - datetime
+id: paragraph.open_home.field_open_home_end
+field_name: field_open_home_end
+entity_type: paragraph
+bundle: open_home
+label: 'Open home end'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

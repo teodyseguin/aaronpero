@@ -1,0 +1,52 @@
+uuid: 95a53be0-f511-45b4-9882-618a02d52fc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.testimonial_address
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_listing
+    - field.field.node.testimonial.field_testimonial_name
+    - node.type.testimonial
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.testimonial.testimonial_address
+targetEntityType: node
+bundle: testimonial
+mode: testimonial_address
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_listing:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_testimonial_name:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

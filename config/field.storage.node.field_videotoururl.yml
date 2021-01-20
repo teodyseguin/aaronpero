@@ -1,0 +1,19 @@
+uuid: a4c3ecd9-effb-4c6d-b6af-33145710506c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - youtube
+id: node.field_videotoururl
+field_name: field_videotoururl
+entity_type: node
+type: youtube
+settings: {  }
+module: youtube
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

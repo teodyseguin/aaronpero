@@ -1,0 +1,19 @@
+uuid: c8c3adff-e4ef-4c54-950c-e0024a8c9c80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_water_heating
+    - node.type.listing
+id: node.listing.field_features_water_heating
+field_name: field_features_water_heating
+entity_type: node
+bundle: listing
+label: 'Water heating'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

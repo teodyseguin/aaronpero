@@ -1,0 +1,34 @@
+uuid: 1417c226-bfb6-4c74-adf9-352bf28517c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_home
+    - node.type.listing
+    - paragraphs.paragraphs_type.open_home
+  module:
+    - entity_reference_revisions
+id: node.listing.field_open_home
+field_name: field_open_home
+entity_type: node
+bundle: listing
+label: 'Open home'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      open_home: open_home
+    target_bundles_drag_drop:
+      condition:
+        weight: 3
+        enabled: false
+      open_home:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

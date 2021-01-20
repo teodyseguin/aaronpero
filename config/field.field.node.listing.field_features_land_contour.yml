@@ -1,0 +1,19 @@
+uuid: 93a4e16a-3431-47fa-b2d0-9508b3d2dcb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_land_contour
+    - node.type.listing
+id: node.listing.field_features_land_contour
+field_name: field_features_land_contour
+entity_type: node
+bundle: listing
+label: 'Land contour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

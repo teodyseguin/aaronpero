@@ -1,0 +1,21 @@
+uuid: f2d0224d-9f3b-4294-a9cc-f0e6e66cb653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing_status
+    - node.type.listing
+  module:
+    - options
+id: node.listing.field_listing_status
+field_name: field_listing_status
+entity_type: node
+bundle: listing
+label: 'Listing Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

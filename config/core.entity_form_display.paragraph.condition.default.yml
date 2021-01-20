@@ -1,0 +1,48 @@
+uuid: 7ed0ace4-1179-4ac4-b4b4-07bc8b760457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.condition.field_condition_date
+    - field.field.paragraph.condition.field_condition_notes
+    - field.field.paragraph.condition.field_condition_satisfied
+    - field.field.paragraph.condition.field_condition_title
+    - paragraphs.paragraphs_type.condition
+  module:
+    - datetime
+id: paragraph.condition.default
+targetEntityType: paragraph
+bundle: condition
+mode: default
+content:
+  field_condition_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_condition_notes:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_condition_satisfied:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_condition_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

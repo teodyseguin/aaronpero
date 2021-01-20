@@ -1,0 +1,50 @@
+uuid: f6a4971c-d88d-45b9-a01c-d08622eef78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.condition.field_condition_date
+    - field.field.paragraph.condition.field_condition_notes
+    - field.field.paragraph.condition.field_condition_satisfied
+    - field.field.paragraph.condition.field_condition_title
+    - paragraphs.paragraphs_type.condition
+  module:
+    - datetime
+    - options
+id: paragraph.condition.default
+targetEntityType: paragraph
+bundle: condition
+mode: default
+content:
+  field_condition_date:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_condition_notes:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_condition_satisfied:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_condition_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

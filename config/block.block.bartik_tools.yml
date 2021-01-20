@@ -1,6 +1,6 @@
-uuid: ce15e05c-f33b-4f58-81ba-282a6cd25982
+uuid: b7e128de-4854-4b67-ab88-a15112be5610
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -24,4 +24,9 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /salesmap
+    negate: true
+    context_mapping: {  }

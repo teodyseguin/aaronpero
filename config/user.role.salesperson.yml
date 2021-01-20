@@ -1,0 +1,9 @@
+uuid: 00e64611-e5da-4344-bf2f-0a095e13a008
+langcode: en
+status: true
+dependencies: {  }
+id: salesperson
+label: Salesperson
+weight: 3
+is_admin: null
+permissions: {  }

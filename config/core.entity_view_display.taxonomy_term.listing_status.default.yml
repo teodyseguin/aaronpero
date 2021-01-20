@@ -1,0 +1,23 @@
+uuid: 22fe5b4c-c1d6-4323-b4e9-f941fdb90565
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.listing_status.field_map_pin
+    - taxonomy.vocabulary.listing_status
+  module:
+    - text
+id: taxonomy_term.listing_status.default
+targetEntityType: taxonomy_term
+bundle: listing_status
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_map_pin: true

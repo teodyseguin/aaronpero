@@ -1,0 +1,22 @@
+uuid: 1188d8ed-4e83-4c28-b662-9e5d7915555a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: listing_number
+label: 'Listing Number'
+type: 'canonical_entities:node'
+pattern: '[node:field_listing_number]'
+selection_criteria:
+  7d616263-56ad-4101-b984-b445d4b1fed4:
+    id: node_type
+    bundles:
+      listing: listing
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7d616263-56ad-4101-b984-b445d4b1fed4
+selection_logic: and
+weight: -5
+relationships: {  }

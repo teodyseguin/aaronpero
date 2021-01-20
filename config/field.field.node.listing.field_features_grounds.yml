@@ -1,0 +1,19 @@
+uuid: 29487614-e724-4b51-a300-b04d31634101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_grounds
+    - node.type.listing
+id: node.listing.field_features_grounds
+field_name: field_features_grounds
+entity_type: node
+bundle: listing
+label: Grounds
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

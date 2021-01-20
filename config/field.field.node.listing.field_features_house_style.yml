@@ -1,0 +1,19 @@
+uuid: d32e3ffa-2fa3-4cfa-953d-8728d01bc574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_features_house_style
+    - node.type.listing
+id: node.listing.field_features_house_style
+field_name: field_features_house_style
+entity_type: node
+bundle: listing
+label: 'House style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

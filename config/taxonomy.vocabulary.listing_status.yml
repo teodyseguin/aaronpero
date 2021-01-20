@@ -1,0 +1,8 @@
+uuid: 961d7880-d72c-40d8-8e11-118592ac9dc6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Listing status'
+vid: listing_status
+description: ''
+weight: 0
