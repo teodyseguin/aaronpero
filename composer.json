@@ -52,7 +52,7 @@
         "drupal/webform": "5.13",
         "drupal/youtube": "1.2",
         "drush/drush": "^10.2",
-        "drush-ops/behat-drush-endpoint": "^9.3",
+        "drush-ops/behat-drush-endpoint": "^9.3"
     },
     "require-dev": {
         "behat/behat": "^3.1",
