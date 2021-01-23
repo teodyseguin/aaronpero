@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * aaronpero-button
+ *
+ * Available variables for aaronpero-button:
+ *  - aaronpero_button.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_button.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+{% set classes = "btn btn-outline-primary btn--width btn-primary--extra-styles btn--margin-bg" %}
+{% set url = "#" %}
+
+{% if button_classes %}
+  {% set classes = button_classes %}
+{% endif %}
+
+{% if button_url %}
+  {% set url = button_url %}
+{% endif %}
+
+{% if url == "#" %}
+  <button type="button" class="{{ classes }}">
+    {{ icon }}
+    {{ button_text }}
+  </button>
+{% else %}
+  <a href="{{ url }}" class="{{ classes }}">
+    {{ icon }}
+    {{ button_text }}
+  </a>
+{% endif %}

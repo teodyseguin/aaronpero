@@ -1,0 +1,9 @@
+aaronpero_button_demo_block:
+  title: Aaronpero Button Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+aaronpero_button:
+  example_var: This is an example var
+

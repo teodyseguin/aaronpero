@@ -1,5 +1,5 @@
 /**
- * aaronpero-jumbotron
+ * aaronpero-button
  */
 
 import $ from 'jquery';
@@ -8,14 +8,12 @@ import $ from 'jquery';
 import 'protons';
 
 // Module template
-import './_aaronpero-jumbotron.twig';
-import './index.css';
-import './bg-home-hero.jpg';
+import './_aaronpero-button.twig';
 
-export const name = 'aaronpero-jumbotron';
+export const name = 'aaronpero-button';
 
 export const defaults = {
-  dummyClass: 'js-aaronpero-jumbotron-exists',
+  dummyClass: 'js-aaronpero-button-exists',
 };
 
 /**
@@ -36,20 +34,20 @@ export function disable($context, settings) {}
  * @param {jQuery} $context - A piece of DOM
  * @param {Object} settings - Settings object
  */
-export function enable($context, { aaronperoJumbotron = {} }) {
+export function enable($context, { aaronperoButton = {} }) {
   // Find our component within the DOM
-  const $aaronperoJumbotron = $('.aaronpero-jumbotron', $context);
+  const $aaronperoButton = $('.aaronpero-button', $context);
   // Bail if component does not exist
-  if (!$aaronperoJumbotron.length) {
+  if (!$aaronperoButton.length) {
     return;
   }
   // Merge defaults with incoming settings
   const settings = {
     ...defaults,
-    ...aaronperoJumbotron,
+    ...aaronperoButton,
   };
   // An example of what could be done with this component
-  $aaronperoJumbotron.addClass(settings.dummyClass);
+  $aaronperoButton.addClass(settings.dummyClass);
 }
 
 export default enable;

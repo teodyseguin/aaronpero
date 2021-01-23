@@ -1,0 +1,9 @@
+aaronpero_quote_image_demo_block:
+  title: Aaronpero Quote Image Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+aaronpero_quote_image:
+  example_var: This is an example var
+
