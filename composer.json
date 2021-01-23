@@ -15,13 +15,12 @@
         }
     ],
     "require": {
-        "pantheon-systems/drupal-integrations": "^8",
-        "pantheon-systems/quicksilver-pushback": "^2",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/admin_toolbar": "2.2",
         "drupal/backup_migrate": "4.1",
         "drupal/commerce": "2.18",
+        "drupal/components": "^2.1",
         "drupal/core-composer-scaffold": "^8.9",
         "drupal/core-project-message": "^8.9",
         "drupal/core-recommended": "^8.9",
@@ -51,8 +50,10 @@
         "drupal/token": "1.7",
         "drupal/webform": "5.13",
         "drupal/youtube": "1.2",
+        "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "^10.2",
-        "drush-ops/behat-drush-endpoint": "^9.3"
+        "pantheon-systems/drupal-integrations": "^8",
+        "pantheon-systems/quicksilver-pushback": "^2"
     },
     "require-dev": {
         "behat/behat": "^3.1",
