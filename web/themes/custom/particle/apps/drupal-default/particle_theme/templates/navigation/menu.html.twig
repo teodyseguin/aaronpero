@@ -24,7 +24,7 @@
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes.addClass('text-black'), 0) }}
+{{ menus.menu_links(items, attributes.addClass('self-center'), 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
@@ -36,7 +36,7 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes.addClass('inline') }}>
-        {{ link(item.title, item.url, { 'class':['text-black active:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold'] }) }}
+        {{ link(item.title, item.url, { 'class':['text-black active:text-lightblue hover:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold'] }) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

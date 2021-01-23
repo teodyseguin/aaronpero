@@ -1,5 +1,5 @@
 /**
- * aaronpero-header
+ * aaronpero-logo
  */
 
 import $ from 'jquery';
@@ -8,14 +8,12 @@ import $ from 'jquery';
 import 'protons';
 
 // Module template
-import './_aaronpero-header.twig';
-import './index.css';
-import './aaronpero-logo.png';
+import './_aaronpero-logo.twig';
 
-export const name = 'aaronpero-header';
+export const name = 'aaronpero-logo';
 
 export const defaults = {
-  dummyClass: 'js-aaronpero-header-exists',
+  dummyClass: 'js-aaronpero-logo-exists',
 };
 
 /**
@@ -36,20 +34,20 @@ export function disable($context, settings) {}
  * @param {jQuery} $context - A piece of DOM
  * @param {Object} settings - Settings object
  */
-export function enable($context, { aaronperoHeader = {} }) {
+export function enable($context, { aaronperoLogo = {} }) {
   // Find our component within the DOM
-  const $aaronperoHeader = $('.aaronpero-header', $context);
+  const $aaronperoLogo = $('.aaronpero-logo', $context);
   // Bail if component does not exist
-  if (!$aaronperoHeader.length) {
+  if (!$aaronperoLogo.length) {
     return;
   }
   // Merge defaults with incoming settings
   const settings = {
     ...defaults,
-    ...aaronperoHeader,
+    ...aaronperoLogo,
   };
   // An example of what could be done with this component
-  $aaronperoHeader.addClass(settings.dummyClass);
+  $aaronperoLogo.addClass(settings.dummyClass);
 }
 
 export default enable;

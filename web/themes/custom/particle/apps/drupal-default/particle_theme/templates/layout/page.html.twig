@@ -49,7 +49,9 @@
   {% include '@particle/misc/components--error-message.html.twig' %}
 {% else %}
   {% include '@molecules/aaronpero-header/_aaronpero-header.twig' with {
-      main_menu: page.primary_menu.particle_mainnavigation
+      fixed: 'fixed',
+      main_menu: page.primary_menu.particle_mainnavigation,
+      site_logo: '/sites/default/files/aaronpero-logo.png'
   } %}
   <div class="layout-container">
     {# { page.primary_menu } #}

@@ -1,0 +1,9 @@
+aaronpero_logo_demo_block:
+  title: Aaronpero Logo Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+aaronpero_logo:
+  example_var: This is an example var
+

@@ -1,52 +1,33 @@
-{#
-/**
- * @file
- * aaronpero-header
- *
- * Available variables for aaronpero-header:
- *  - aaronpero_header.variable_name [variable_type]: Description of the variable. Example below.
- *  - aaronpero_header.invert [bool]: When set, colors will be inverted for light display on dark background.
- */
-#}
-
-<div class="header py-5">
-  <div class="flex w-full">
+<div class="aaronpero-header flex  top-0 left-0 w-full">
+  <div class="flex container mx-auto self-center">
     <div class="flex-grow w-1/2 header__logo">
-      {% if site_logo %}
-        {{ site_logo }}
-      {% else %}
-        <a href="/">
-          <img src="../../../../../dist/app-drupal/assets/images/aaronpero-logo.png" alt="">
-        </a>
-      {% endif %}
+      <a href="/">
+        {% include '@atoms/aaronpero-logo/_aaronpero-logo.twig' %}
+      </a>
     </div>
-    <div class="flex-grow w-1/2 header__main-menu">
-      {% if main_menu %}
-        {{ main_menu }}
-      {% else %}
-        <ul>
-          <li class="inline">
-            <a href="/sold-listings" class="text-black active:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
-              Selling
-            </a>
-          </li>
-          <li class="inline">
-            <a href="/active-listings" class="text-black active:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
-              Buying
-            </a>
-          </li>
-          <li class="inline">
-            <a href="/about" class="text-black active:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
-              About
-            </a>
-          </li>
-          <li class="inline">
-            <a href="/contact" class="text-black active:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
-              Contact me
-            </a>
-          </li>
-        </ul>
-      {% endif %}
+    <div class="flex flex-grow w-1/2 header__main-menu">
+      <ul class="self-center">
+        <li class="inline">
+          <a href="/sold-listings" class="text-black active:text-lightblue hover:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
+            Selling
+          </a>
+        </li>
+        <li class="inline">
+          <a href="/active-listings" class="text-black active:text-lightblue hover:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
+            Buying
+          </a>
+        </li>
+        <li class="inline">
+          <a href="/about" class="text-black active:text-lightblue hover:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
+            About
+          </a>
+        </li>
+        <li class="inline">
+          <a href="/contact" class="text-black active:text-lightblue hover:text-lightblue hover:bg-gray-100 p-5 rounded font-semibold">
+            Contact me
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

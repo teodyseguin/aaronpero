@@ -21,3 +21,7 @@ jquery:
     ../../../dist/app-drupal/assets/drupal-jquery.js:
       preprocess: false
       weight: -20
+
+aaronpero_main:
+  js:
+    js/aaronpero_main.js: {}

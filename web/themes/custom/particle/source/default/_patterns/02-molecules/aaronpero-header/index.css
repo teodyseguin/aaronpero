@@ -1,0 +1,11 @@
+.aaronpero-header {
+  z-index: 1030px;
+  height: 94px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 8px rgba(66,75,84,.2);
+  box-shadow: 0 2px 8px rgba(66,75,84,.2);
+}
+
+div[id*="block-particle-mainnavigation"] {
+  display: flex;
+}

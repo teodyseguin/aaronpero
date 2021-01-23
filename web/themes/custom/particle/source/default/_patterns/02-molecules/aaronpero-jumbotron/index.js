@@ -9,6 +9,7 @@ import 'protons';
 
 // Module template
 import './_aaronpero-jumbotron.twig';
+import './index.css';
 
 export const name = 'aaronpero-jumbotron';
 
