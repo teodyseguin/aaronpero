@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * aaronpero-footer
+ *
+ * Available variables for aaronpero-footer:
+ *  - aaronpero_footer.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_footer.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<footer class="footer p-3 footer bg-ultramarineblue text-white" role="contentinfo">
+  <div class="flex w-full mt-10">
+    <div class="w-1/2 pr-20 pl-20">
+      {% if logo %}
+        <div class="footer__logo">{{ logo }}</div>
+      {% endif %}
+
+      {% if address %}
+        <div class="mt-10">{{ address }}</div>
+      {% else %}
+        <div class="mt-10">
+          <p class="mb-5">379 Halswell Road, Christchurch</p>
+          <p class="mb-5">Phone: 03 322 1197</p>
+          <p class="mb-5">Mobile: 0275 227 667</p>
+          <p class="mb-5">Fax: 03 322 1597</p>
+          <p class="mb-5">Email: aaron.pero@harcourts.co.nz</p>
+        </div>
+      {% endif %}
+    </div>
+    <div class="w-1/4">
+      {% if main_menu %}
+        {{ main_menu }}
+      {% else %}
+        <h3>Main Menu</h3>
+        <ul class="mt-10">
+          <li><a href="/" class="text-white">Main</a></li>
+          <li><a href="/selling" class="text-white">Selling</a></li>
+          <li><a href="/buying" class="text-white">Buying</a></li>
+          <li><a href="/about" class="text-white">About</a></li>
+          <li><a href="/contact-me" class="text-white">Contact me</a></li>
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="w-1/4">
+      {% if social_media %}
+        {{ social_media }}
+      {% else %}
+        <h3>Social media</h3>
+        <ul class="mt-10">
+          <li><a class="text-white">Facebook</a></li>
+          <li><a class="text-white">Twitter</a></li>
+          <li><a class="text-white">YouTube</a></li>
+          <li><a class="text-white">LinkedIn</a></li>
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+  <div class="flex w-full p-8">
+    {% if copyright %}
+      <p class="text-center w-full">{{ copyright }}</p>
+    {% else %}
+      <p class="text-center w-full">{{ 'Grenadier Real Estate Ltd. Licensed REAA 2008' }}</p>
+    {% endif %}
+  </div>
+</footer>

@@ -1,0 +1,9 @@
+aaronpero_footer_demo_block:
+  title: Aaronpero Footer Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+aaronpero_footer:
+  example_var: This is an example var
+
