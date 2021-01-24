@@ -1,0 +1,33 @@
+uuid: 06aa6e46-fbad-4fc4-90a2-2b07e3d0f677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_and_image.field_image
+    - field.field.paragraph.quote_and_image.field_quote_text
+    - paragraphs.paragraphs_type.quote_and_image
+  module:
+    - image
+    - text
+id: paragraph.quote_and_image.default
+targetEntityType: paragraph
+bundle: quote_and_image
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_quote_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

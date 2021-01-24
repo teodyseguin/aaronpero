@@ -1,0 +1,21 @@
+uuid: 78948024-848c-4b5f-aa54-3c76be9a53a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contents
+    - paragraphs.paragraphs_type.jumbotron
+  module:
+    - text
+id: paragraph.jumbotron.field_contents
+field_name: field_contents
+entity_type: paragraph
+bundle: jumbotron
+label: Contents
+description: 'Some contents for the jumbotron. For best output from the design, put a minimal of 4 lines of texts.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

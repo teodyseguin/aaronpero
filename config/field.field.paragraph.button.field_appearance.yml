@@ -1,0 +1,21 @@
+uuid: 3006e2bd-86be-4d8d-a800-af9c539c6eb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_appearance
+    - paragraphs.paragraphs_type.button
+  module:
+    - options
+id: paragraph.button.field_appearance
+field_name: field_appearance
+entity_type: paragraph
+bundle: button
+label: Appearance
+description: 'Set the appearance for the button'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

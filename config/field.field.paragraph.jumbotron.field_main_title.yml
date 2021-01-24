@@ -1,0 +1,19 @@
+uuid: b2f15abe-c832-41b4-b7d7-c977a06e2285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_title
+    - paragraphs.paragraphs_type.jumbotron
+id: paragraph.jumbotron.field_main_title
+field_name: field_main_title
+entity_type: paragraph
+bundle: jumbotron
+label: 'Main title'
+description: 'The title of the jumbotron component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

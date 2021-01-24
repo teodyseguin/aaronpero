@@ -1,0 +1,30 @@
+uuid: 5da3d2ae-da39-4324-acfd-4de9ec8027d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.button.field_appearance
+    - field.field.paragraph.button.field_button_text
+    - paragraphs.paragraphs_type.button
+id: paragraph.button.default
+targetEntityType: paragraph
+bundle: button
+mode: default
+content:
+  field_appearance:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

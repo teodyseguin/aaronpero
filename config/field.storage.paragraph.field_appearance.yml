@@ -1,0 +1,27 @@
+uuid: 4a2f2a12-a50c-4c3c-816e-78a8e18dc14b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_appearance
+field_name: field_appearance
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: white_bg
+      label: 'White background'
+    -
+      value: ultramarine_blue_bg
+      label: 'Ultramarine blue background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

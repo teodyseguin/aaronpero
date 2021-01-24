@@ -1,0 +1,10 @@
+uuid: 52be2b21-a371-44ae-a2f8-2bbadd80227b
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: Button
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: 0063a123-502c-42bd-96b4-a52feed14d29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pretitle
+    - paragraphs.paragraphs_type.jumbotron
+id: paragraph.jumbotron.field_pretitle
+field_name: field_pretitle
+entity_type: paragraph
+bundle: jumbotron
+label: Pretitle
+description: 'A text before the main title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
