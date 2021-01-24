@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_components
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
+    - entity_reference_revisions
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -44,6 +48,23 @@ third_party_settings:
               id: 'extra_field_block:node:page:links'
             additional: {  }
             weight: 1
+          57abe5f8-9939-4556-9104-e9d2ea094134:
+            uuid: 57abe5f8-9939-4556-9104-e9d2ea094134
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_components'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -59,9 +80,19 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   links:
     weight: 101
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

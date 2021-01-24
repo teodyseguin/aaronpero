@@ -1,0 +1,43 @@
+uuid: 63fde53e-db45-4533-b741-1a9be7367080
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_buttons
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.jumbotron
+  module:
+    - entity_reference_revisions
+id: paragraph.jumbotron.field_buttons
+field_name: field_buttons
+entity_type: paragraph
+bundle: jumbotron
+label: Buttons
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      button: button
+    target_bundles_drag_drop:
+      button:
+        enabled: true
+        weight: 6
+      condition:
+        weight: 7
+        enabled: false
+      jumbotron:
+        weight: 8
+        enabled: false
+      open_home:
+        weight: 9
+        enabled: false
+      quote_and_image:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

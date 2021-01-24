@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.jumbotron.field_background_image
+    - field.field.paragraph.jumbotron.field_buttons
     - field.field.paragraph.jumbotron.field_contents
     - field.field.paragraph.jumbotron.field_main_title
     - field.field.paragraph.jumbotron.field_pretitle
@@ -11,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.jumbotron
   module:
     - image
+    - paragraphs
     - text
 id: paragraph.jumbotron.default
 targetEntityType: paragraph
@@ -24,6 +26,18 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_buttons:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_contents:
     weight: 2
