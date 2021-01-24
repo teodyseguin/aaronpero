@@ -6,5 +6,5 @@ id: jumbotron
 label: Jumbotron
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'A component that lets you create a jumbotron'
 behavior_plugins: {  }

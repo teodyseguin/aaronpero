@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.views_reference.field_views
     - paragraphs.paragraphs_type.views_reference
   module:
-    - commerce
+    - viewsreference
 id: paragraph.views_reference.default
 targetEntityType: paragraph
 bundle: views_reference
@@ -15,12 +15,12 @@ content:
   field_views:
     weight: 0
     settings:
-      hide_single_entity: true
-      autocomplete_threshold: 7
-      autocomplete_size: 60
-      autocomplete_placeholder: ''
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: commerce_entity_select
+    type: viewsreference_autocomplete
     region: content
 hidden:
   created: true

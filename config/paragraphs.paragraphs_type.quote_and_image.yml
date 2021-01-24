@@ -6,5 +6,5 @@ id: quote_and_image
 label: 'Quote and Image'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'A component that lets you create a quote/highlight text with image'
 behavior_plugins: {  }

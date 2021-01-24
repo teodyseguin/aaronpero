@@ -6,5 +6,5 @@ id: views_reference
 label: 'Views reference'
 icon_uuid: null
 icon_default: null
-description: 'A component that lets your reference a views'
+description: 'A component that lets you reference a views entity'
 behavior_plugins: {  }

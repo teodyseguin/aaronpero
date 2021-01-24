@@ -1,17 +1,18 @@
-uuid: 9c7bc539-e5ce-47c3-95f3-08a0e3080a39
+uuid: b7840367-0961-4ebc-a62e-cdd2e1bdcf8d
 langcode: en
 status: true
 dependencies:
   module:
-    - block
     - paragraphs
+    - views
+    - viewsreference
 id: paragraph.field_views
 field_name: field_views
 entity_type: paragraph
-type: entity_reference
+type: viewsreference
 settings:
-  target_type: block
-module: core
+  target_type: view
+module: viewsreference
 locked: false
 cardinality: 1
 translatable: true

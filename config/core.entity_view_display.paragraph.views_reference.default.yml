@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.views_reference.field_views
     - paragraphs.paragraphs_type.views_reference
+  module:
+    - viewsreference
 id: paragraph.views_reference.default
 targetEntityType: paragraph
 bundle: views_reference
@@ -12,10 +14,11 @@ mode: default
 content:
   field_views:
     weight: 0
-    label: hidden
+    label: above
     settings:
-      link: true
+      plugin_types:
+        - block
     third_party_settings: {  }
-    type: entity_reference_label
+    type: viewsreference_formatter
     region: content
 hidden: {  }

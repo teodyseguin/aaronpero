@@ -1,0 +1,10 @@
+uuid: 3917ddaf-95c9-4485-9872-f1f4a40a5607
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+icon_uuid: null
+icon_default: null
+description: 'A component that lets you create a banner.'
+behavior_plugins: {  }

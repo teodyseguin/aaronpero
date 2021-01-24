@@ -1,10 +1,12 @@
-uuid: e794230a-ae96-45cc-9d92-b2c57be61377
+uuid: 4f2c65b0-f1f0-4e91-9c1e-3f3055033d45
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_views
     - paragraphs.paragraphs_type.views_reference
+  module:
+    - viewsreference
 id: paragraph.views_reference.field_views
 field_name: field_views
 entity_type: paragraph
@@ -13,11 +15,51 @@ label: Views
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: bb883b5d-7fb4-4b8e-9e50-c3b55e36596e
+default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:block'
-  handler_settings: {  }
-field_type: entity_reference
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_stores: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    feeds_feed: 0
+    files: 0
+    fillpdf_forms: 0
+    fillpdf_form_fields: 0
+    frontpage: 0
+    listings_admin: 0
+    listings_block: 0
+    listings_display: 0
+    media: 0
+    media_library: 0
+    profiles: 0
+    properties_admin: 0
+    redirect: 0
+    taxonomy_term: 0
+    testimonials: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference
