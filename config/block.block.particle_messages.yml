@@ -1,0 +1,22 @@
+uuid: d656dee8-b644-48bf-8ec6-b5aed2eead47
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - particle
+_core:
+  default_config_hash: jdsZiDkr1DEjt5wgk0yVmoe7k6HX8HoM98POpnpIPq4
+id: particle_messages
+theme: particle
+region: highlighted
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
