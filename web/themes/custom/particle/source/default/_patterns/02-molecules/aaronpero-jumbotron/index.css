@@ -1,6 +1,7 @@
 .aaronpero-jumbotron {
   background-image: cover;
   background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .aaronpero-jumbotron__inner {

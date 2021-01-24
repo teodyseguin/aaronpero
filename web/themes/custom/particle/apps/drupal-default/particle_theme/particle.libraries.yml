@@ -25,3 +25,9 @@ jquery:
 aaronpero_main:
   js:
     js/aaronpero_main.js: {}
+
+particle_theme_css:
+  css:
+    theme:
+      css/index.css:
+        minified: true

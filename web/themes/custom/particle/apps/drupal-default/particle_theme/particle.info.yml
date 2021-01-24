@@ -6,6 +6,7 @@ core_version_requirement: ^8.8 || ^9
 libraries:
   - particle/core
   - particle/aaronpero_main
+  - particle/particle_theme_css
 libraries-override:
   core/jquery: particle/jquery
 regions:

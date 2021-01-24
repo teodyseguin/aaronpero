@@ -10,15 +10,24 @@
 #}
 
 {% set jumbotron_bg = '../../../assets/images/bg-home-hero.jpg' %}
-{% if bg_image %}
-  {% set jumbotron_bg = bg_image %}
-{% endif %}
 {% set selling_text = "I'm Selling" %}
 {% set buying_text = "I'm Buying" %}
 
+{% if bg_image %}
+  {% set jumbotron_bg = bg_image %}
+{% endif %}
+
+{% if selling_button_text %}
+  {% set selling_text = selling_button_text %}
+{% endif %}
+
+{% if buying_button_text %}
+  {% set buying_text = buying_button_text %}
+{% endif %}
+
 <div class="aaronpero-jumbotron relative" style="background-image: url('{{ jumbotron_bg }}')">
   <div class="aaronpero-jumbotron__inner flex w-full overflow-hidden relative">
-    <div class="jumbotron-content container">
+    <div class="jumbotron-content">
       <span class="pretitle-typo pretitle d-block uppercase text-ultramarineblue mb-5">
         {% if pretitle %}
           {{ pretitle }}
@@ -35,34 +44,29 @@
         {% endif %}
       </h1>
 
-      {% if textcontents %}
-        <p class="text-ultramarineblue">{{ textcontents }}</p>
-      {% else %}
-        <p class="text-ultramarineblue">Whether you are looking to buy a house or thinking of selling your home in Christchurch, I can help you. My strategic approach will achieve a premium sale price, and if you are looking to buy, there are over 1,000 listings on our network that I can help you own.</p>
-      {% endif %}
+      <div class="contents mb-20">
+        {% if textcontents %}
+          <p class="text-ultramarineblue">{{ textcontents }}</p>
+        {% else %}
+          <p class="text-ultramarineblue">Whether you are looking to buy a house or thinking of selling your home in Christchurch, I can help you. My strategic approach will achieve a premium sale price, and if you are looking to buy, there are over 1,000 listings on our network that I can help you own.</p>
+        {% endif %}
+      </div>
 
-      {% if selling_button_text %}
-        {% set selling_text = selling_button_text %}
-      {% endif %}
+      <div class="w-full">
+        {% include '@atoms/aaronpero-button/_aaronpero-button.twig' with {
+          button_classes: 'btn btn-outline-primary btn--width btn-primary--extra-styles btn--margin-bg mr-5',
+          button_text: selling_text,
+          button_url: selling_button_url,
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><g><g><path fill="#001f49" d="M7.998 7.005c0-1.1.9-2 2-2s2 .9 2 2zm9-.696V2.006c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.601L10.668.605c-.38-.34-.96-.34-1.34 0L.968 8.14c-.34.3-.13.87.33.87h1.7v7.004c0 .55.45 1.001 1 1.001h3c.55 0 1-.45 1-1V11.01h4v5.003c0 .55.45 1.001 1 1.001h3c.55 0 1-.45 1-1V9.01h1.7c.46 0 .68-.57.33-.87z"></path></g></g></svg>'
+        } %}
 
-      {% include '@atoms/aaronpero-button/_aaronpero-button.twig' with {
-        button_classes: 'btn btn-outline-primary btn--width btn-primary--extra-styles btn--margin-bg',
-        button_text: selling_text,
-        button_url: selling_button_url,
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><g><g><path fill="#001f49" d="M7.998 7.005c0-1.1.9-2 2-2s2 .9 2 2zm9-.696V2.006c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1.601L10.668.605c-.38-.34-.96-.34-1.34 0L.968 8.14c-.34.3-.13.87.33.87h1.7v7.004c0 .55.45 1.001 1 1.001h3c.55 0 1-.45 1-1V11.01h4v5.003c0 .55.45 1.001 1 1.001h3c.55 0 1-.45 1-1V9.01h1.7c.46 0 .68-.57.33-.87z"></path></g></g></svg>'
-      } %}
-
-      {% if buying_button_text %}
-        {% set buying_text = buying_button_text %}
-      {% endif %}
-
-      {% include '@atoms/aaronpero-button/_aaronpero-button.twig' with {
-        button_classes: 'btn btn-primary btn--width btn-primary--extra-styles',
-        button_text: buying_text,
-        button_url: '#',
-        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12"><g><g><path fill="#fff" d="M5.998 8.002c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.65-4a5.998 5.998 0 0 0-6.88-3.88c-2.29.46-4.15 2.29-4.63 4.58a6.006 6.006 0 0 0 5.86 7.3 5.99 5.99 0 0 0 5.65-4h4.35v2c0 1.1.9 2 2 2s2-.9 2-2v-2c1.1 0 2-.9 2-2s-.9-2-2-2z"></path></g></g></svg>'
-      } %}
-
+        {% include '@atoms/aaronpero-button/_aaronpero-button.twig' with {
+          button_classes: 'btn btn-primary btn--width btn-primary--extra-styles',
+          button_text: buying_text,
+          button_url: buying_button_url,
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12"><g><g><path fill="#fff" d="M5.998 8.002c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.65-4a5.998 5.998 0 0 0-6.88-3.88c-2.29.46-4.15 2.29-4.63 4.58a6.006 6.006 0 0 0 5.86 7.3 5.99 5.99 0 0 0 5.65-4h4.35v2c0 1.1.9 2 2 2s2-.9 2-2v-2c1.1 0 2-.9 2-2s-.9-2-2-2z"></path></g></g></svg>'
+        } %}
+      </div>
     </div>
   </div>
 </div>

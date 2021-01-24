@@ -1,0 +1,7 @@
+{% include '@molecules/aaronpero-listing-card/_aaronpero-listing-card.twig' with {
+  date: '',
+  title: node.getTitle(),
+  location: content.field_streetaddress.0,
+  bedrooms: content.field_bedrooms.0,
+  bathrooms: content.field_bathrooms.0
+}%}

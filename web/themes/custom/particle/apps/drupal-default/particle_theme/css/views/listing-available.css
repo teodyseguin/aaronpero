@@ -1,0 +1,11 @@
+#block-views-block-listings-block-available-listings-block .views-rows {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1263px;
+  margin: 0 auto;
+}
+
+#block-views-block-listings-block-available-listings-block .views-row {
+  margin-right: 16px;
+  margin-left: 16px;
+}

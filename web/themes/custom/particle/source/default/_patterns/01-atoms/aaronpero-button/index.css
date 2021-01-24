@@ -1,0 +1,81 @@
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  color: #000d1b;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 12px 0;
+  font-size: 1.125rem;
+  line-height: 1.55555556;
+  border-radius: 5px;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.btn--margin-bg {
+  padding-right: 39px;
+  padding-left: 39px;
+  margin-bottom: 12px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #001f49;
+  border-color: #001f49;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+}
+
+.btn-primary--extra-styles {
+  -webkit-box-shadow: 0 8px 30px rgba(65,93,121,.2);
+  box-shadow: 0 8px 30px rgba(65,93,121,.2);
+}
+
+.btn-primary--extra-styles {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn--width {
+  min-width: 210px;
+  width: auto;
+}
+
+.btn--margin-bg svg {
+  position: relative;
+  top: 2px;
+}
+
+.btn-primary--extra-styles svg {
+  display: inline-block;
+  margin-right: 11px;
+  vertical-align: unset;
+}
+
+.btn-primary--extra-styles:hover {
+  -webkit-box-shadow: 0 8px 30px rgba(65,93,121,.2),0 4px 12px rgba(0,108,255,.3);
+  box-shadow: 0 8px 30px rgba(65,93,121,.2),0 4px 12px rgba(0,108,255,.3);
+  background-color: #00aeee;
+  border-color: #00aeee;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #001f49;
+  border-color: #001f49;
+}
+
+.btn-outline-primary {
+  color: #001f49;
+  border-color: #001f49;
+}

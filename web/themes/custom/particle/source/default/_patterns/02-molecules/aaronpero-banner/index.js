@@ -1,5 +1,5 @@
 /**
- * aaronpero-quote-image
+ * aaronpero-banner
  */
 
 import $ from 'jquery';
@@ -8,14 +8,14 @@ import $ from 'jquery';
 import 'protons';
 
 // Module template
-import './_aaronpero-quote-image.twig';
+import './_aaronpero-banner.twig';
 import './index.css';
-import './portrait-home.png';
+import './cta-bg.jpg';
 
-export const name = 'aaronpero-quote-image';
+export const name = 'aaronpero-banner';
 
 export const defaults = {
-  dummyClass: 'js-aaronpero-quote-image-exists',
+  dummyClass: 'js-aaronpero-banner-exists',
 };
 
 /**
@@ -36,20 +36,20 @@ export function disable($context, settings) {}
  * @param {jQuery} $context - A piece of DOM
  * @param {Object} settings - Settings object
  */
-export function enable($context, { aaronperoQuoteImage = {} }) {
+export function enable($context, { aaronperoBanner = {} }) {
   // Find our component within the DOM
-  const $aaronperoQuoteImage = $('.aaronpero-quote-image', $context);
+  const $aaronperoBanner = $('.aaronpero-banner', $context);
   // Bail if component does not exist
-  if (!$aaronperoQuoteImage.length) {
+  if (!$aaronperoBanner.length) {
     return;
   }
   // Merge defaults with incoming settings
   const settings = {
     ...defaults,
-    ...aaronperoQuoteImage,
+    ...aaronperoBanner,
   };
   // An example of what could be done with this component
-  $aaronperoQuoteImage.addClass(settings.dummyClass);
+  $aaronperoBanner.addClass(settings.dummyClass);
 }
 
 export default enable;

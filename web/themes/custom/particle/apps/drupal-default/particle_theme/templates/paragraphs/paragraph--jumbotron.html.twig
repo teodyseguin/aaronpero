@@ -1,0 +1,10 @@
+{% include '@molecules/aaronpero-jumbotron/_aaronpero-jumbotron.twig' with {
+  pretitle: content.field_pretitle.0,
+  jumbotron_title: content.field_main_title.0,
+  textcontents: content.field_contents.0,
+  bg_image: file_url(content.field_background_image['#items'].entity.uri.value),
+  selling_button_text: content.field_buttons.0.field_button_text.0,
+  selling_button_url: content.field_buttons.0.field_button_text.0['#url'],
+  buying_button_text: content.field_buttons.1.field_button_text.0,
+  buying_button_text: content.field_buttons.1.field_button_text.0['#url']
+}%}
