@@ -1,0 +1,21 @@
+uuid: 24dc922b-2ab6-4fca-b029-5be3660cce5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contents
+    - paragraphs.paragraphs_type.2_column_image_left_text_right
+  module:
+    - text
+id: paragraph.2_column_image_left_text_right.field_contents
+field_name: field_contents
+entity_type: paragraph
+bundle: 2_column_image_left_text_right
+label: Contents
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
