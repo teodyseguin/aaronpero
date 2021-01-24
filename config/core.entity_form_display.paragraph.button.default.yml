@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.button.field_appearance
     - field.field.paragraph.button.field_button_text
+    - field.field.paragraph.button.field_button_url
     - paragraphs.paragraphs_type.button
+  module:
+    - link
 id: paragraph.button.default
 targetEntityType: paragraph
 bundle: button
@@ -24,6 +27,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_button_url:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true
