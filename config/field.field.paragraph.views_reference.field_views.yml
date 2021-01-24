@@ -1,0 +1,23 @@
+uuid: e794230a-ae96-45cc-9d92-b2c57be61377
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views
+    - paragraphs.paragraphs_type.views_reference
+id: paragraph.views_reference.field_views
+field_name: field_views
+entity_type: paragraph
+bundle: views_reference
+label: Views
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: bb883b5d-7fb4-4b8e-9e50-c3b55e36596e
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings: {  }
+field_type: entity_reference

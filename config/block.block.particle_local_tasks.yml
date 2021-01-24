@@ -9,7 +9,7 @@ _core:
 id: particle_local_tasks
 theme: particle
 region: content
-weight: -60
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

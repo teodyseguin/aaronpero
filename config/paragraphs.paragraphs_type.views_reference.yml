@@ -1,0 +1,10 @@
+uuid: 7cec3dbb-c7f8-40fc-ae61-f6fb79b9627f
+langcode: en
+status: true
+dependencies: {  }
+id: views_reference
+label: 'Views reference'
+icon_uuid: null
+icon_default: null
+description: 'A component that lets your reference a views'
+behavior_plugins: {  }

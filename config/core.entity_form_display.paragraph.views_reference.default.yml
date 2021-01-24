@@ -1,0 +1,27 @@
+uuid: 5299d80c-262b-4902-aac9-98e6ac404f8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.views_reference.field_views
+    - paragraphs.paragraphs_type.views_reference
+  module:
+    - commerce
+id: paragraph.views_reference.default
+targetEntityType: paragraph
+bundle: views_reference
+mode: default
+content:
+  field_views:
+    weight: 0
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+    type: commerce_entity_select
+    region: content
+hidden:
+  created: true
+  status: true
