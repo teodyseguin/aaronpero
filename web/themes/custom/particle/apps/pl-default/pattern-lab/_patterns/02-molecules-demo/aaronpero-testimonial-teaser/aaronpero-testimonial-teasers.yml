@@ -1,0 +1,9 @@
+aaronpero_testimonial_teaser_demo_block:
+  title: Aaronpero Testimonial Teaser Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+aaronpero_testimonial_teaser:
+  example_var: This is an example var
+

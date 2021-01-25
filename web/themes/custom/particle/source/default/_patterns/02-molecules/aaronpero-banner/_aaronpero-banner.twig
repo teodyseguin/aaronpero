@@ -12,18 +12,34 @@
 {% set pretitle = 'Selling Your Property' %}
 {% set title = 'Free Market Analysis' %}
 {% set button_text = 'Request' %}
-{% set banner_bg = '../../../assets/images/cta-bg.jpg' %}
+{% set bg = '../../../assets/images/cta-bg.jpg' %}
 
-<div class="aaronpero-banner" style="background-image: url('{{ banner_bg }}')">
+{% if banner_pretitle %}
+  {% set pretitle = banner_pretitle %}
+{% endif %}
+
+{% if banner_title %}
+  {% set title = banner_title %}
+{% endif %}
+
+{% if banner_button_text %}
+  {% set button_text = banner_button_text %}
+{% endif %}
+
+{% if banner_bg %}
+  {% set bg = banner_bg %}
+{% endif %}
+
+<div class="aaronpero-banner" style="background-image: url('{{ bg }}')">
   <div class="aaronpero-banner__inner relative">
-    <div class="banner-content absolute">
-      <div>
+    <div class="banner-content absolute w-full z-10 mt-16">
+      <div class="banner-pretitle text-ultramarineblue uppercase mb-3">
         {{ pretitle }}
       </div>
-      <div>
+      <h3 class="banner-title font-bold text-ultramarineblue uppercase mb-4">
         {{ title }}
-      </div>
-      <div>
+      </h3>
+      <div class="banner-contents w-full mb-16">
         {% if contents %}
           {{ contents|raw }}
         {% else %}
@@ -33,10 +49,10 @@
           </p>
         {% endif %}
       </div>
-      <div>
+      <div class="w-full">
         {% include '@atoms/aaronpero-button/_aaronpero-button.twig' with {
           button_classes: 'btn btn-outline-primary btn--width btn-primary--extra-styles btn--margin-bg mr-5',
-          button_text: button_text,
+          banner_text: button_text
         } %}
       </div>
     </div>

@@ -1,0 +1,8 @@
+{% include '@molecules/aaronpero-banner/_aaronpero-banner.twig' with {
+  banner_pretitle: content.field_pretitle.0,
+  banner_title: content.field_main_title.0,
+  contents: content.field_contents.0,
+  banner_button_text: content.field_banner_cta.0.field_button_text.0,
+  banner_button_url: content.field_banner_cta.0.field_button_text.0['#url'],
+  banner_bg: file_url(content.field_background_image['#items'].entity.uri.value)
+} %}

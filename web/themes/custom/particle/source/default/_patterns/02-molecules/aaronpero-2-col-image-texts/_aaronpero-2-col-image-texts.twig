@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * aaronpero-2-col-image-texts
+ *
+ * Available variables for aaronpero-2-col-image-texts:
+ *  - aaronpero_2_col_image_texts.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_2_col_image_texts.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+{% set pretitle = 'Why Choose Us' %}
+{% set maintitle = 'Lorem Ipsum for why it will be hte best choice' %}
+{% set image = '../../../assets/images/bg-why.png' %}
+
+<div class="aaronpero-2-col-image-texts flex w-full">
+  <div class="image w-1/2">
+    <img src="{{ image }}" alt="">
+  </div>
+  <div class="texts w-1/2">
+    <div class="pretitle uppercase text-ultramarineblue w-full">
+      {{ pretitle }}
+    </div>
+    <div class="maintitle text-ultramarineblue font-bold w-full">
+      {{ maintitle }}
+    </div>
+    <div class="contents w-full">
+      {% if contents %}
+        {{ contents|raw }}
+      {% else %}
+        <p>
+          Whether you are looking to buy a house or thinking of selling your home<br />
+          in Christchurch, I can help you. My strategic approach will achieve a<br />
+          premium sale price, and if you are looking to buy, there are over 1,000<br />
+          listings on our network that I can help you own.
+        </p>
+      {% endif %}
+    </div>
+    <div class="services w-full">
+      <div class="font-bold text-ultramarineblue">What we can give you</div>
+    </div>
+  </div>
+</div>

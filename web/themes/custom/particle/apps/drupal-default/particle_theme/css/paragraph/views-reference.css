@@ -1,0 +1,11 @@
+.paragraph--type--views-reference .views-rows {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1263px;
+  margin: 0 auto;
+}
+
+.paragraph--type--views-reference .views-row {
+  margin-right: 16px;
+  margin-left: 16px;
+}
