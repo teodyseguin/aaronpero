@@ -23,6 +23,9 @@
 
 .jumbotron-content {
   z-index: 2;
+  margin-top: 146px;
+  max-width: 59.75%;
+  padding: 0 12%;
 }
 
 .jumbotron-title {
