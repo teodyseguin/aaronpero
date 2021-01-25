@@ -1,0 +1,6 @@
+services:
+  aaronpero.tools:
+    class: Drupal\aaronpero_tools\AaronPeroTools
+    arguments: 
+      - '@entity_type.manager'
+      - '@logger.factory'
