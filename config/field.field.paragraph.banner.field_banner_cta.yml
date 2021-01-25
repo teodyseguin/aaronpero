@@ -1,0 +1,52 @@
+uuid: c0f257b5-5e41-45c9-88b6-8c5d6d1998dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_cta
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.button
+  module:
+    - entity_reference_revisions
+id: paragraph.banner.field_banner_cta
+field_name: field_banner_cta
+entity_type: paragraph
+bundle: banner
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      button: button
+    target_bundles_drag_drop:
+      2_column_image_left_text_right:
+        weight: 9
+        enabled: false
+      banner:
+        weight: 10
+        enabled: false
+      button:
+        enabled: true
+        weight: 11
+      condition:
+        weight: 12
+        enabled: false
+      jumbotron:
+        weight: 13
+        enabled: false
+      open_home:
+        weight: 14
+        enabled: false
+      quote_and_image:
+        weight: 15
+        enabled: false
+      views_reference:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: 1c2e37e2-32c2-4f68-b0b5-4aa941eeadb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pretitle
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_pretitle
+field_name: field_pretitle
+entity_type: paragraph
+bundle: banner
+label: Pretitle
+description: 'The text before the main title'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

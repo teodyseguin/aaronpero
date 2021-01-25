@@ -1,0 +1,19 @@
+uuid: 26a94842-ba1a-417e-b03f-9d3678e1b356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_title
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_main_title
+field_name: field_main_title
+entity_type: paragraph
+bundle: banner
+label: 'Main title'
+description: 'The main title of this component'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
