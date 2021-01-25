@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * aaronpero-testimonial-teaser
+ *
+ * Available variables for aaronpero-testimonial-teaser:
+ *  - aaronpero_testimonial_teaser.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_testimonial_teaser.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+{% set name = 'Kara Haper' %}
+{% set location = '14 Maka Lane' %}
+{% set avatar = '../../../assets/images/feed1.jpg' %}
+
+{% if testimonial_name %}
+  {% set name = testimonial_name %}
+{% endif %}
+
+<div class="aaronpero-testimonial-teaser testimonial rounded shadow-lg">
+  <div class="stars w-full mb-10 p-8"></div>
+  <div class="contents w-full mb-10 p-8">
+    {% if testimonial_text %}
+      {{ testimonial_text }}
+    {% else %}
+      <p>
+        Aaron's innovative marketing coupled with<br />
+        his drive to achieve a sale resulted in<br />
+        competitive bidding and... More
+      </p>
+    {% endif %}
+  </div>
+  <div class="testimonial__author flex p-8">
+    <div class="flex testimonial__avatar w-1/5 mr-5">
+      <img src="{{ avatar }}" alt="" class="rounded-full">
+    </div>
+    <div class="testimonial__person flex flex-wrap">
+      <div class="name w-full font-bold uppercase">{{ name }}</div>
+      <div class="location w-full">{{ location }}</div>
+    </div>
+  </div>
+</div>

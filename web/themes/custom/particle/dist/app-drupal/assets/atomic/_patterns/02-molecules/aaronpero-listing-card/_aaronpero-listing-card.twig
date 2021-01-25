@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * aaronpero-listing-card
+ *
+ * Available variables for aaronpero-listing-card:
+ *  - aaronpero_listing_card.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_listing_card.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+{% set card_date = 'Auction 01 Oct 2020'  %}
+{% set card_title = 'Attitude + Magnitude' %}
+{% set card_location = '128 Lichfield Street' %}
+{% set card_bedrooms = 4 %}
+{% set card_bathrooms = 2 %}
+{% set card_image = '../../../assets/images/card-sale1.jpg' %}
+
+{% if date %}
+  {% set card_date = date %}
+{% endif %}
+
+{% if title %}
+  {% set card_title = title %}
+{% endif %}
+
+{% if location %}
+  {% set card_location = location %}
+{% endif %}
+
+{% if bedrooms %}
+  {% set card_bedrooms = bedrooms %}
+{% endif %}
+
+{% if bathrooms %}
+  {% set card_bathrooms = bathrooms %}
+{% endif %}
+
+{% if image %}
+  {% set card_image = image %}
+{% endif %}
+
+<div class="aaronpero-listing-card">
+  <div class="relative card-image w-full bg-gray-500" style="background-image: url('{{ card_image }}');">
+    <div class="date absolute text-white font-bold">
+      {{ card_date }}
+    </div>
+  </div>
+  <div class="card-title w-full font-bold text-ultramarineblue">
+    {{ card_title }}
+  </div>
+  <div class="location w-full">
+    {{ card_location }}
+  </div>
+  <div class="flex">
+    <div class="bedrooms">
+      {% if card_bedrooms > 1 %}
+        {% set card_bedrooms_text = 'Bedrooms' %}
+      {% else %}
+        {% set card_bedrooms_text = 'Bedroom' %}
+      {% endif %}
+
+      {{ card_bedrooms }} {{ card_bedrooms_text }}
+    </div>
+    <div class="bathrooms">
+      {% if card_bathrooms > 1 %}
+        {% set card_bathrooms_text = 'Bathrooms' %}
+      {% else %}
+        {% set card_bathrooms_text = 'Bathroom' %}
+      {% endif %}
+
+      {{ card_bathrooms }} {{ card_bathrooms_text }}
+    </div>
+  </div>
+</div>

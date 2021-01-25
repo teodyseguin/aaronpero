@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * aaronpero-quote-image
+ *
+ * Available variables for aaronpero-quote-image:
+ *  - aaronpero_quote_image.variable_name [variable_type]: Description of the variable. Example below.
+ *  - aaronpero_quote_image.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+{% set image_src = '../../../assets/images/portrait-home.png' %}
+
+{% if image %}
+  {% set image_src = image %}
+{% endif %}
+
+<div class="aaronpero-quote-image flex">
+  <div class="highlight-text w-1/2 relative">
+    {% if quote_text %}
+      {{ quote_text|raw }}
+    {% else %}
+      <p>
+        Marketing is telling a story<br />
+        about your home that resonate<br />
+        enough with buyers that they<br />
+        purchase your property
+      </p>
+    {% endif %}
+  </div>
+  <div class="highlight-img w-1/2">
+    <img src="{{ image_src }}" alt="">
+  </div>
+</div>
