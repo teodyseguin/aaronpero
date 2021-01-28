@@ -1,0 +1,8 @@
+{% include '@molecules/aaronpero-2-col-image-texts/_aaronpero-2-col-image-texts.twig' with {
+  component: {
+    pretitle: content.field_pretitle.0,
+    maintitle: content.field_main_title.0,
+    image: file_url(content.field_image['#items'].entity.uri.value),
+    contents: content.field_contents.0
+  }
+} %}

@@ -1,0 +1,25 @@
+.aaronpero-2-col-image-texts .maintitle {
+  margin-bottom: 28px;
+  font-size: 48px;
+  letter-spacing: -1px;
+}
+
+.aaronpero-2-col-image-texts .pretitle {
+  margin-bottom: 12px;
+  font-size: 26px;
+  letter-spacing: .5px;
+  line-height: 1.26923077;
+  color: #001f49;
+  font-weight: normal;
+}
+
+.aaronpero-2-col-image-texts .contents {
+  margin-bottom: 52px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.aaronpero-2-col-image-texts .contents p {
+  font-size: 20px;
+  line-height: 1.6;
+}

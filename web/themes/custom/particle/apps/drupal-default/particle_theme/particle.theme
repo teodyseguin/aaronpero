@@ -26,3 +26,4 @@ include 'includes/node.theme.inc';
 include 'includes/suggestions.theme.inc';
 include 'includes/user.theme.inc';
 include 'includes/views.theme.inc';
+include 'includes/paragraph.theme.inc';

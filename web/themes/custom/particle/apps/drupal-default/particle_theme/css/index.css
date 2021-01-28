@@ -13,3 +13,8 @@
  * Views related css files.
  */
 @import "views/listing-available.css";
+
+/**
+ * Global main style.
+ */
+@import "main.css";

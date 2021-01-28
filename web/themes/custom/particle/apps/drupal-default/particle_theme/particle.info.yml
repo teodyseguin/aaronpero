@@ -26,7 +26,7 @@ regions:
 # If you change DRUPAL_DIST path, update here.
 component-libraries:
   protons:
-    paths: []
+    paths:
   atoms:
     paths:
       - ../../../dist/app-drupal/assets/atomic/_patterns/01-atoms

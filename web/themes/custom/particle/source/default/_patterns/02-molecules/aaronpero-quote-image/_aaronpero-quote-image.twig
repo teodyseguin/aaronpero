@@ -15,20 +15,24 @@
   {% set image_src = image %}
 {% endif %}
 
-<div class="aaronpero-quote-image flex">
-  <div class="highlight-text w-1/2 relative">
-    {% if quote_text %}
-      {{ quote_text|raw }}
-    {% else %}
-      <p>
-        Marketing is telling a story<br />
-        about your home that resonate<br />
-        enough with buyers that they<br />
-        purchase your property
-      </p>
-    {% endif %}
-  </div>
-  <div class="highlight-img w-1/2">
-    <img src="{{ image_src }}" alt="">
+<div class="aaronpero-quote-image w-full">
+  <div class="inner flex relative">
+    <div class="highlight-text w-1/2 self-end mb-10">
+      {% if quote_text %}
+        <h4 class="quote-text text-ultramarineblue">
+          {{ quote_text }}
+        </h4>
+      {% else %}
+        <h4 class="quote-text text-ultramarineblue">
+          Marketing is telling a story<br />
+          about your home that resonate<br />
+          enough with buyers that they<br />
+          purchase your property
+        </h4>
+      {% endif %}
+    </div>
+    <div class="highlight-img w-1/2">
+      <img src="{{ image_src }}" alt="">
+    </div>
   </div>
 </div>

@@ -13,7 +13,19 @@
 {% set maintitle = 'Lorem Ipsum for why it will be hte best choice' %}
 {% set image = '../../../assets/images/bg-why.png' %}
 
-<div class="aaronpero-2-col-image-texts flex w-full">
+{% if component.pretitle %}
+  {% set pretitle = component.pretitle %}
+{% endif %}
+
+{% if component.maintitle %}
+  {% set maintitle = component.maintitle %}
+{% endif %}
+
+{% if component.image %}
+  {% set image = component.image %}
+{% endif %}
+
+<div class="aaronpero-2-col-image-texts flex w-full mb-24">
   <div class="image w-1/2">
     <img src="{{ image }}" alt="">
   </div>

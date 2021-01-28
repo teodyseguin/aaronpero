@@ -9,3 +9,28 @@
 .card-image {
   height: 342px;
 }
+
+.card-date {
+  left: 30px;
+  bottom: 20px;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.card-title {
+  font-size: 26px;
+  letter-spacing: .5px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  color: #001f49;
+  padding: 20px 30px 0;
+}
+
+.card-location {
+  margin-bottom: 40px;
+  padding: 0 30px;
+}
+
+.card-details {
+  padding: 0 30px;
+}

@@ -53,7 +53,10 @@
       main_menu: page.primary_menu.particle_mainnavigation,
       site_logo: '/sites/default/files/aaronpero-logo.png'
   } %}
-  <div class="layout-container">
+  {% if hide_title %}
+    {% set hide_title_class = 'hide-title' %}
+  {% endif %}
+  <div class="layout-container {{ hide_title_class }}">
     {# { page.primary_menu } #}
 
     {# { page.highlighted } #}

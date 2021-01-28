@@ -1,4 +1,6 @@
 {% include '@molecules/aaronpero-testimonial-teaser/_aaronpero-testimonial-teaser.twig' with {
   testimonial_name: content.field_testimonial_name.0,
-  testimonial_text: content.body.0
-}%}
+  testimonial_text: contents,
+  testimonial_location: listing.field_streetaddress.0,
+  testimonial_image: first_image
+} %}

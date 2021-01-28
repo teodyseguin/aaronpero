@@ -1,11 +1,84 @@
+.paragraph--type--views-reference {
+  margin-bottom: 100px;
+}
+
 .paragraph--type--views-reference .views-rows {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.paragraph--type--views-reference header {
   max-width: 1263px;
   margin: 0 auto;
+}
+
+.paragraph--type--views-reference header h3 {
+  color: #001f49;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.paragraph--type--views-reference header p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 48px;
 }
 
 .paragraph--type--views-reference .views-row {
   margin-right: 16px;
   margin-left: 16px;
+}
+
+.js-pager__items {
+  text-align: center;
+}
+
+.js-pager__items a.button {
+  color: #212529;
+  min-width: 210px;
+  background-color: #e9ebed;
+  border-color: #e9ebed;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+  display: inline-block;
+  font-weight: 700;
+  color: #000d1b;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 12px 0;
+  font-size: 1.125rem;
+  line-height: 1.55555556;
+  border-radius: 5px;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+/**
+ * Testimonial views reference.
+ */
+ .paragraph--type--views-reference.testimonials header h3 {
+  margin-bottom: 40px;
+}
+
+.paragraph--type--views-reference.testimonials header {
+  text-align: center;
+}
+
+.paragraph--type--views-reference.testimonials .pretitle {
+  font-size: 26px;
+  letter-spacing: .5px;
+  line-height: 1.26923077;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #001f49;
 }

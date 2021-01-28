@@ -1,0 +1,9 @@
+star_svg_demo_block:
+  title: Star Svg Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+star_svg:
+  example_var: This is an example var
+

@@ -17,9 +17,19 @@
   {% set name = testimonial_name %}
 {% endif %}
 
+{% if testimonial_location %}
+  {% set location = testimonial_location %}
+{% endif %}
+
+{% if testimonial_image %}
+  {% set avatar = testimonial_image %}
+{% endif %}
+
 <div class="aaronpero-testimonial-teaser testimonial rounded shadow-lg">
-  <div class="stars w-full mb-10 p-8"></div>
-  <div class="contents w-full mb-10 p-8">
+  <div class="stars w-full p-8">
+    {% include '@atoms/star-svg/_star-svg.twig' %}
+  </div>
+  <div class="contents w-full mb-10 px-8">
     {% if testimonial_text %}
       {{ testimonial_text }}
     {% else %}
