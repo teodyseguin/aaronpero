@@ -1,8 +1,9 @@
-uuid: 66814dd7-0837-489f-a64b-54a36f2c2cd3
+uuid: f6455685-51ee-47ca-9bca-55bfb6d1ab05
 langcode: en
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.body
     - field.field.node.page.field_components
     - field.field.node.page.field_hide_title
@@ -10,6 +11,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
+    - options
     - text
     - user
 third_party_settings:
@@ -18,32 +20,37 @@ third_party_settings:
     enabled: false
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
   field_components:
     type: entity_reference_revisions_entity_view
-    weight: 2
-    label: hidden
+    weight: 102
+    label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
+  field_hide_title:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   links:
-    weight: 1
+    weight: 101
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_hide_title: true
-  layout_builder__layout: true
+hidden: {  }

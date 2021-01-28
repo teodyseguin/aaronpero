@@ -1,0 +1,29 @@
+uuid: 99148d0d-f693-40d2-901c-da2284f7fde0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.what_we_can_give_you.field_svg_icon
+    - taxonomy.vocabulary.what_we_can_give_you
+  module:
+    - text
+id: taxonomy_term.what_we_can_give_you.default
+targetEntityType: taxonomy_term
+bundle: what_we_can_give_you
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_svg_icon:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

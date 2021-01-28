@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.2_column_image_left_text_right.field_contents
+    - field.field.paragraph.2_column_image_left_text_right.field_features
     - field.field.paragraph.2_column_image_left_text_right.field_image
     - field.field.paragraph.2_column_image_left_text_right.field_main_title
     - field.field.paragraph.2_column_image_left_text_right.field_pretitle
@@ -24,6 +25,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_features:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_image:
     weight: 0

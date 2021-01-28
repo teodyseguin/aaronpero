@@ -879,7 +879,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: 'Properties for sale in Christchurch'
+          content: "<h3>Properties for sale in Christchurch</h3>\r\n<p>Whether you are looking to buy a house or thinking of selling</p>"
           plugin_id: text_custom
       display_description: ''
       style:
@@ -1123,6 +1123,7 @@ display:
         use_more_text: false
         pager: false
         use_ajax: false
+        header: false
       style:
         type: default
         options:
@@ -1159,6 +1160,18 @@ display:
             button_text: 'Load More'
             automatically_load_content: false
       use_ajax: true
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<h3>Do you have a similar property to sell?</h3>\r\n<p>Whether you are looking to buy a house or thinking of selling</p>"
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:

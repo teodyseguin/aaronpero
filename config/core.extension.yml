@@ -1,5 +1,6 @@
 module:
   aaronpero_common: 0
+  aaronpero_tools: 0
   address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0

@@ -483,10 +483,23 @@ display:
       defaults:
         style: false
         row: false
+        header: false
       row:
         type: 'entity:node'
         options:
           view_mode: teaser
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<div class=\"pretitle\">Testimonials</div>\r\n<h3 class=\"maintitle\">What Our Clients Say?</h3>"
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:

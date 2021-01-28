@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.views_reference.field_name
     - field.field.paragraph.views_reference.field_views
     - paragraphs.paragraphs_type.views_reference
   module:
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: views_reference
 mode: default
 content:
+  field_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_views:
     weight: 0
     settings:

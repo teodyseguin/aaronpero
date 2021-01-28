@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_components
-    - field.field.node.page.layout_builder__layout
+    - field.field.node.page.field_hide_title
     - node.type.page
   module:
     - text
@@ -31,4 +31,4 @@ content:
     region: content
 hidden:
   field_components: true
-  layout_builder__layout: true
+  field_hide_title: true

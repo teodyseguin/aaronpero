@@ -1,0 +1,19 @@
+uuid: 118aaff2-81db-4767-bb04-862e1e76cf6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_svg_icon
+    - taxonomy.vocabulary.what_we_can_give_you
+id: taxonomy_term.what_we_can_give_you.field_svg_icon
+field_name: field_svg_icon
+entity_type: taxonomy_term
+bundle: what_we_can_give_you
+label: 'SVG Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
