@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=OpenSans|Oswald|SourceCodePro|Source+Sans+Pro&display=swap);
+@import url(https://fonts.googleapis.com/css?family=OpenSans|Oswald|SourceCodePro|Source+Sans+Pro:wght@400;900&display=swap);
 /**
  * @file
  * Root CSS file to add Tailwind Configuration.
@@ -627,7 +627,7 @@ video {
 
 body {
   font-size: 1rem;
-  font-family: Open Sans, Helvetica Neue, Helvetica Arial, sans-serif;
+  font-family: Source Sans Pro, Times New Roman, serif;
 }
 
 code {
@@ -662,6 +662,10 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  font-weight: 900;
+  --text-opacity: 1;
+  color: #15174c;
+  color: rgba(21, 23, 76, var(--text-opacity));
 }
 
 h4 {
@@ -669,7 +673,11 @@ h4 {
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  --text-opacity: 1;
+  color: #15174c;
+  color: rgba(21, 23, 76, var(--text-opacity));
 }
 
 h6 {
@@ -95134,6 +95142,7 @@ div[id*="block-particle-mainnavigation"] {
 
 .aaronpero-testimonial-teaser {
   width: 388.666px;
+  min-height: 359px;
   max-width: 388.666px;
 }
 
@@ -95143,7 +95152,6 @@ div[id*="block-particle-mainnavigation"] {
 }
 
 .aaronpero-testimonial-teaser .contents {
-  margin-bottom: 0;
   font-size: 18px;
   line-height: 1.33333;
 }
@@ -95171,5 +95179,33 @@ div[id*="block-particle-mainnavigation"] {
   --bg-opacity: 1;
   background-color: #000;
   background-color: rgba(0, 0, 0, var(--bg-opacity));
+}
+
+.selling-block a,
+.selling-block a:hover,
+.selling-block a:focus,
+.selling-block a:active {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.selling-block a {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.buying-block a,
+.buying-block a:hover,
+.buying-block a:focus,
+.buying-block a:active {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity))
+}
+
+.buying-block a {
+  display: inline-block;
+  margin-bottom: 0.75rem;
 }
 

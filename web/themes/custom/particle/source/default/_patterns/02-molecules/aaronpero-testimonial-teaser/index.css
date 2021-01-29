@@ -1,5 +1,6 @@
 .aaronpero-testimonial-teaser {
   width: 388.666px;
+  min-height: 359px;
   max-width: 388.666px;
 }
 
@@ -9,7 +10,6 @@
 }
 
 .aaronpero-testimonial-teaser .contents {
-  margin-bottom: 0;
   font-size: 18px;
   line-height: 1.33333;
 }

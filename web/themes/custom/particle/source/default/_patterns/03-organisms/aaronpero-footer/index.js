@@ -9,6 +9,7 @@ import 'protons';
 
 // Module template
 import './_aaronpero-footer.twig';
+import './index.css';
 
 export const name = 'aaronpero-footer';
 

@@ -1,3 +1,9 @@
+.front .aaronpero-quote-image {
+  position: relative;
+  z-index: 2;
+  margin-top: -300px;
+}
+
 .layout-container.hide-title #block-particle-page-title {
   display: none;
 }

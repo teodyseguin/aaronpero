@@ -56,7 +56,7 @@
   {% if hide_title %}
     {% set hide_title_class = 'hide-title' %}
   {% endif %}
-  <div class="layout-container {{ hide_title_class }}">
+  <div class="layout-container {{ hide_title_class }} {{ is_front }}">
     {# { page.primary_menu } #}
 
     {# { page.highlighted } #}
@@ -94,5 +94,9 @@
   {# /.layout-container #}
 
   {# { page.footer } #}
-  {% include '@organisms/aaronpero-footer/_aaronpero-footer.twig' %}
+  {% include '@organisms/aaronpero-footer/_aaronpero-footer.twig' with {
+    address: contact_block,
+    selling: selling_block,
+    buying: buying_block
+  } %}
 {% endif %}

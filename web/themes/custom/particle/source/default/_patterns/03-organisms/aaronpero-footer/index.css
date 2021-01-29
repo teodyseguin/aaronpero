@@ -1,0 +1,23 @@
+.selling-block a,
+.selling-block a:hover,
+.selling-block a:focus,
+.selling-block a:active {
+  @apply text-white;
+}
+
+.selling-block a {
+  @apply inline-block;
+  @apply mb-3;
+}
+
+.buying-block a,
+.buying-block a:hover,
+.buying-block a:focus,
+.buying-block a:active {
+  @apply text-white
+}
+
+.buying-block a {
+  @apply inline-block;
+  @apply mb-3;
+}

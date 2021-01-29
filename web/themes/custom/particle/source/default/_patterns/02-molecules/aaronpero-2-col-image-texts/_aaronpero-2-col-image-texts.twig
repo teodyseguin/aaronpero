@@ -10,7 +10,7 @@
 #}
 
 {% set pretitle = 'Why Choose Us' %}
-{% set maintitle = 'Lorem Ipsum for why it will be hte best choice' %}
+{% set maintitle = 'Lorem Ipsum for why it will be the best choice' %}
 {% set image = '../../../assets/images/bg-why.png' %}
 
 {% if component.pretitle %}
@@ -29,14 +29,14 @@
   <div class="image w-1/2">
     <img src="{{ image }}" alt="">
   </div>
-  <div class="texts w-1/2">
+  <div class="texts w-1/2 font-serif">
     <div class="pretitle uppercase text-ultramarineblue w-full">
       {{ pretitle }}
     </div>
-    <div class="maintitle text-ultramarineblue font-bold w-full">
+    <h3 class="maintitle w-full">
       {{ maintitle }}
-    </div>
-    <div class="contents w-full">
+    </h3>
+    <div class="contents w-full font-serif">
       {% if contents %}
         {{ contents|raw }}
       {% else %}
@@ -48,8 +48,8 @@
         </p>
       {% endif %}
     </div>
-    <div class="services w-full">
-      <div class="font-bold text-ultramarineblue">What we can give you</div>
+    <div class="services w-full font-serif">
+      <h5>What we can give you</h5>
     </div>
   </div>
 </div>
