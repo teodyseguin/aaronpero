@@ -2,9 +2,9 @@
 
 namespace Drupal\aaronpero_tools;
 
-use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drupal\Core\Path\PathMatcher;
 
 class AaronPeroTools {
 
@@ -23,14 +23,23 @@ class AaronPeroTools {
   protected $loggerFactory;
 
   /**
+   * Path Matcher.
+   *
+   * @var \Drupal\Core\Path\PathMatcher
+   */
+  protected $pathMatcher;
+
+  /**
    * Class constructor.
    */
   public function __construct(
     EntityTypeManagerInterface $entityTypeManager,
-    LoggerChannelFactoryInterface $loggerFactory) {
+    LoggerChannelFactoryInterface $loggerFactory,
+    PathMatcher $pathMatcher) {
 
     $this->entityTypeManager = $entityTypeManager;
     $this->loggerFactory = $loggerFactory;
+    $this->pathMatcher = $pathMatcher;
   }
 
   /**
@@ -45,6 +54,13 @@ class AaronPeroTools {
    */
   public function loggerFactory() {
     return $this->loggerFactory;
+  }
+
+  /**
+   * Return the Path matcher service.
+   */
+  public function pathMatcher() {
+    return $this->pathMatcher;
   }
 
 }
