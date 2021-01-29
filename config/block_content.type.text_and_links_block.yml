@@ -1,0 +1,8 @@
+uuid: 7384432b-3845-4d37-9c4b-170d97dd013f
+langcode: en
+status: true
+dependencies: {  }
+id: text_and_links_block
+label: 'Text and Links block'
+revision: 0
+description: 'A block from which you can add text and links to. Links can be internal or external.'

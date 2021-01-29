@@ -1,0 +1,8 @@
+uuid: e3b19722-7781-411e-a722-7583fe3df432
+langcode: en
+status: true
+dependencies: {  }
+id: contact_block
+label: 'Contact block'
+revision: 0
+description: 'A block that contains your contact information such us phone numbers, email and social media links.'

@@ -1,0 +1,55 @@
+uuid: ab6f3db2-6d0a-42dc-9e15-0564d9b9aebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.storage.block_content.field_social_media_links
+    - paragraphs.paragraphs_type.social_media_links
+  module:
+    - entity_reference_revisions
+id: block_content.contact_block.field_social_media_links
+field_name: field_social_media_links
+entity_type: block_content
+bundle: contact_block
+label: 'Social media links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      social_media_links: social_media_links
+    target_bundles_drag_drop:
+      2_column_image_left_text_right:
+        weight: 10
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      button:
+        weight: 12
+        enabled: false
+      condition:
+        weight: 13
+        enabled: false
+      jumbotron:
+        weight: 14
+        enabled: false
+      open_home:
+        weight: 15
+        enabled: false
+      quote_and_image:
+        weight: 16
+        enabled: false
+      social_media_links:
+        enabled: true
+        weight: 17
+      views_reference:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

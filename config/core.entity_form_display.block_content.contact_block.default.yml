@@ -1,0 +1,55 @@
+uuid: 64e3b09c-6853-41d4-8734-3750b4f804a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.field.block_content.contact_block.body
+    - field.field.block_content.contact_block.field_email
+    - field.field.block_content.contact_block.field_phone_numbers
+    - field.field.block_content.contact_block.field_social_media_links
+  module:
+    - paragraphs
+id: block_content.contact_block.default
+targetEntityType: block_content
+bundle: contact_block
+mode: default
+content:
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_phone_numbers:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_media_links:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: social_media_links
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

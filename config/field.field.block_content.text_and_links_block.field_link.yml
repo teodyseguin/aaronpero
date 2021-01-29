@@ -1,0 +1,23 @@
+uuid: 1cace393-0844-455f-9aa9-c33d508018f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_and_links_block
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.text_and_links_block.field_link
+field_name: field_link
+entity_type: block_content
+bundle: text_and_links_block
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

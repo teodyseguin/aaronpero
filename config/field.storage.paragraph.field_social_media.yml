@@ -1,0 +1,30 @@
+uuid: dc60099d-86d5-4e2a-acb9-f297b6c1ce08
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_social_media
+field_name: field_social_media
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: instagram
+      label: Instagram
+    -
+      value: linkedin
+      label: Linkedin
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,50 @@
+uuid: 8337060a-11a8-4496-9db2-718bda61fe74
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.field.block_content.contact_block.body
+    - field.field.block_content.contact_block.field_email
+    - field.field.block_content.contact_block.field_phone_numbers
+    - field.field.block_content.contact_block.field_social_media_links
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.contact_block.default
+targetEntityType: block_content
+bundle: contact_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_phone_numbers:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_social_media_links:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
