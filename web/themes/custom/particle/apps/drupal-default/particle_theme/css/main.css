@@ -7,3 +7,9 @@
 .layout-container.hide-title #block-particle-page-title {
   display: none;
 }
+
+.user-login-form {
+  width: 541px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
