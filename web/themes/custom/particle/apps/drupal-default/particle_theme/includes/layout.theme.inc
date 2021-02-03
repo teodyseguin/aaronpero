@@ -20,11 +20,13 @@ function particle_preprocess_page(&$variables) {
 
   $node = $variables['node'];
 
-  if ($node->hasField('field_hide_title')) {
-    $hide_title = $node->get('field_hide_title')->value;
-
-    if ($hide_title == 'true') {
-      $variables['hide_title'] = TRUE;
+  if (!empty($node)) {
+    if ($node->hasField('field_hide_title')) {
+      $hide_title = $node->get('field_hide_title')->value;
+  
+      if ($hide_title == 'true') {
+        $variables['hide_title'] = TRUE;
+      }
     }
   }
 
