@@ -1,1 +1,13 @@
-{{ dump(content) }}
+<a href="{{ field_link }}" target="_blank">
+  {% if social_media_icon == 'facebook' %}
+    {% include '@atoms/facebook-icon-svg/_facebook-icon-svg.twig' %}
+  {% endif %}
+
+  {% if social_media_icon == 'instagram' %}
+    {% include '@atoms/instagram-icon-svg/_instagram-icon-svg.twig' %}
+  {% endif %}
+
+  {% if social_media_icon == 'linkedin' %}
+    {% include '@atoms/linkedin-icon-svg/_linkedin-icon-svg.twig' %}
+  {% endif %}
+</a>

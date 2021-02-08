@@ -13,3 +13,14 @@
   margin: 0 auto;
   margin-bottom: 100px;
 }
+
+.social-media-links {
+  display: flex;
+  margin-top: 15px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.social-media-links div {
+  margin: 0 10px;
+}

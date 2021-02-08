@@ -15,3 +15,12 @@ function particle_preprocess_paragraph__views_reference(array &$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function particle_preprocess_paragraph__social_media_links(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  $variables['field_link'] = $paragraph->get('field_link')->uri;
+  $variables['social_media_icon'] = $paragraph->get('field_social_media')->value;
+}
