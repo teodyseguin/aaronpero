@@ -4,6 +4,13 @@
   max-width: 388.666px;
 }
 
+.testimonial__avatar {
+  display: block;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
 .testimonial__avatar img {
   width: 60px;
   height: 60px;

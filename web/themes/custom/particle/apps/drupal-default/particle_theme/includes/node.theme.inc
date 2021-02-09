@@ -64,6 +64,12 @@ function particle_preprocess_node__testimonial(array &$variables) {
       if (!empty($images)) {
         $variables['first_image'] = $images[0]->url();
       }
+      else {
+        $variables['first_image'] = 'drupal empty';
+      }
+    }
+    else {
+      $variables['first_image'] = 'drupal empty';
     }
   }
 }

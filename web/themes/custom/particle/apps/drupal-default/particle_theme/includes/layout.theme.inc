@@ -18,7 +18,9 @@ function particle_preprocess_page(&$variables) {
     $variables['has_components_module'] = TRUE;
   }
 
-  $node = $variables['node'];
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+  }
 
   if (!empty($node)) {
     if ($node->hasField('field_hide_title')) {
