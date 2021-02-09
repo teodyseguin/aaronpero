@@ -13,13 +13,8 @@
 {% set location = '14 Maka Lane' %}
 {% set avatar = '../../../assets/images/feed1.jpg' %}
 
-{% if testimonial_name %}
-  {% set name = testimonial_name %}
-{% endif %}
-
-{% if testimonial_location %}
-  {% set location = testimonial_location %}
-{% endif %}
+{% set name = testimonial_name %}
+{% set location = testimonial_location %}
 
 {% if testimonial_image %}
   {% if testimonial_image != 'drupal empty' %}
@@ -29,7 +24,7 @@
   {% endif %}
 {% endif %}
 
-<div class="aaronpero-testimonial-teaser testimonial rounded shadow-lg">
+<div class="aaronpero-testimonial-teaser testimonial rounded shadow-lg" data-testimonial-id="{{ testimonial_id }}">
   <div class="stars w-full p-8">
     {% include '@atoms/star-svg/_star-svg.twig' %}
   </div>
@@ -49,12 +44,16 @@
       <div class="flex testimonial__avatar w-1/5 mr-5">
         <img src="{{ avatar }}" alt="" class="rounded-full">
       </div>
-    {% else %}
-      <div class="testimonial__avatar rounded-full bg-gray-500 mr-5"></div>
     {% endif %}
+
     <div class="testimonial__person flex flex-wrap">
-      <div class="name w-full font-bold uppercase">{{ name }}</div>
-      <div class="location w-full">{{ location }}</div>
+      {% if name %}
+        <div class="name w-full font-bold uppercase">{{ name }}</div>
+      {% endif %}
+
+      {% if location %}
+        <div class="location w-full">{{ location }}</div>
+      {% endif %}
     </div>
   </div>
 </div>
