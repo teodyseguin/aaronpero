@@ -26,7 +26,9 @@
   </div>
   <div class="card-location w-full">
     {% if location %}
-      {% include '@atoms/location-icon-svg/_location-icon-svg.twig' %}
+      {% include '@atoms/location-icon-svg/_location-icon-svg.twig' with {
+        additional_classes: 'mr-2'
+      } %}
       <span class="inline">{{ location }}</span>
     {% endif %}
   </div>
@@ -63,13 +65,17 @@
   <div class="flex card-details mb-3">
     <div class="floorarea mr-16">
       {% if floorarea %}
-        <span class="inline">
-          <span class="font-bold">{{ floorarea }}</span> m2
-        </span>
+        {% include '@atoms/floorarea-icon-svg/_floorarea-icon-svg.twig' with {
+          additional_classes: 'inline mr-2'
+        } %}
+        <span class="inline"><span class="font-bold">{{ floorarea }}</span> m2</span>
       {% endif %}
     </div>
     <div class="garage">
       {% if garage %}
+        {% include '@atoms/garage-icon-svg/_garage-icon-svg.twig' with {
+          additional_classes: 'inline mr-2'
+        } %}
         <span class="inline">
           <span class="font-bold">{{ garage }}</span> Garage
         </span>

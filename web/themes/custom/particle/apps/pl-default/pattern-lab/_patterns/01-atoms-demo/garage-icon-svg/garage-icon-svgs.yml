@@ -1,0 +1,9 @@
+garage_icon_svg_demo_block:
+  title: Garage Icon Svg Component
+  content:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+
+garage_icon_svg:
+  example_var: This is an example var
+
