@@ -1,20 +1,13 @@
-/* eslint-disable no-new, no-alert */
 import Vue from 'vue';
 
-new Vue({
-  el: '#vue-html-example-1',
-  data: {
-    name: '',
-  },
-  methods: {
-    toSpace() {
-      alert(this.name);
-    },
-  },
-});
-',
-});
-f (document.getElementById('vue-html-example-1')) {
+// Demo twig
+import './vue-widgets.twig';
+import './vue-widgets.yml';
+
+import VueInputExample from './vue-html-example.vue';
+
+// Render Vue element from pre-existing markup in HTML
+if (document.getElementById('vue-html-example-1')) {
   // Use an IIFE for "new"
   (() =>
     new Vue({
