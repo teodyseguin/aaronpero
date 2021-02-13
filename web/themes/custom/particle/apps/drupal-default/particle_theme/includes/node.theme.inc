@@ -18,6 +18,7 @@ function particle_preprocess_node(array &$variables) {
  */
 function particle_preprocess_node__listing(array &$variables) {
   $node = $variables['node'];
+  $variables['nid'] = $node->id();
 
   if ($node->hasField('field_streetaddress')) {
     $location = $node->get('field_streetaddress')->value;
