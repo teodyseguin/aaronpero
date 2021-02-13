@@ -68,6 +68,14 @@ function particle_preprocess_node__listing(array &$variables) {
     }
   }
 
+  if ($node->hasField('field_display_price')) {
+    $display_price = $node->get('field_display_price')->value;
+
+    if (!empty($display_price)) {
+      $variables['display_price'] = $display_price;
+    }
+  }
+
   if ($node->hasField('field_floorarea')) {
     $floorarea = $node->get('field_floorarea')->value;
 

@@ -18,7 +18,11 @@
 <a href="/node/{{ nid }}" class="text-black block aaronpero-listing-card hover:shadow-lg cursor-pointer rounded mb-20">
   <div class="relative card-image w-full bg-gray-500" style="background-image: url('{{ card_image }}');">
     <div class="card-date absolute text-white font-black">
-      {{ card_date }}
+      {% if status == 'Sold' %}
+        <span class="font-bold uppercase">{{ status }}</span>
+      {% else %}
+        <span class="font-bold">{{ display_price }}</span>
+      {% endif %}
     </div>
   </div>
   <div class="card-title w-full font-bold text-ultramarineblue">
