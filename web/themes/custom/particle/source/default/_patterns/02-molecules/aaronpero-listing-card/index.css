@@ -34,3 +34,9 @@
 .card-details {
   padding: 0 30px;
 }
+
+.card-image {
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

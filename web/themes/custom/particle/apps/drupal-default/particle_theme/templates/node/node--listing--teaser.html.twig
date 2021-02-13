@@ -1,10 +1,12 @@
 {% include '@molecules/aaronpero-listing-card/_aaronpero-listing-card.twig' with {
   date: '',
   title: node.getTitle(),
-  location: content.field_streetaddress.0,
-  bedrooms: content.field_bedrooms.0,
-  bathrooms: content.field_bathrooms.0,
+  location: location,
+  bedrooms: bedrooms,
+  bathrooms: bathrooms,
+  floorarea: floorarea,
+  garage: garage,
   image: first_image,
   display_price: content.field_display_price.0,
-  sold: status
+  sold: status,
 } %}
