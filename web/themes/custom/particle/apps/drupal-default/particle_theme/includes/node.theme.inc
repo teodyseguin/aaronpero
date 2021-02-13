@@ -82,6 +82,14 @@ function particle_preprocess_node__listing(array &$variables) {
       $variables['garage'] = $garage;
     }
   }
+
+  if ($node->hasField('field_features_property_type')) {
+    $property_type = $node->get('field_features_property_type')->value;
+
+    if (!empty($property_type)) {
+      $variables['property_type'] = $property_type;
+    }
+  }
 }
 
 /**

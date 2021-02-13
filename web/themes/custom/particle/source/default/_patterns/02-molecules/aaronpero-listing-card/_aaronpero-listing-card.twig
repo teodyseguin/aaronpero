@@ -24,7 +24,7 @@
   <div class="card-title w-full font-bold text-ultramarineblue">
     {{ title }}
   </div>
-  <div class="card-location w-full mb-20">
+  <div class="card-location w-full">
     {% if location %}
       {% include '@atoms/location-icon-svg/_location-icon-svg.twig' %}
       <span class="inline">{{ location }}</span>
@@ -39,8 +39,10 @@
       {% endif %}
 
       {% if bedrooms %}
-        {% include '@atoms/bedrooms-icon-svg/_bedrooms-icon-svg.twig' %}
-        <span class="inline ml-2"><span class="font-bold">{{ bedrooms }}</span> {{ card_bedrooms_text }}</span>
+        {% include '@atoms/bedrooms-icon-svg/_bedrooms-icon-svg.twig' with {
+          additional_classes: 'mr-2'
+        } %}
+        <span class="inline"><span class="font-bold">{{ bedrooms }}</span> {{ card_bedrooms_text }}</span>
       {% endif %}
     </div>
     <div class="bathrooms">
@@ -51,22 +53,24 @@
       {% endif %}
 
       {% if bathrooms %}
-        {% include '@atoms/bathrooms-icon-svg/_bathrooms-icon-svg.twig' %}
-        <span class="inline ml-2"><span class="font-bold">{{ bathrooms }}</span> {{ card_bathrooms_text }}</span>
+        {% include '@atoms/bathrooms-icon-svg/_bathrooms-icon-svg.twig' with {
+          additional_classes: 'mr-2'
+        } %}
+        <span class="inline"><span class="font-bold">{{ bathrooms }}</span> {{ card_bathrooms_text }}</span>
       {% endif %}
     </div>
   </div>
   <div class="flex card-details mb-3">
     <div class="floorarea mr-16">
       {% if floorarea %}
-        <span class="inline ml-2">
+        <span class="inline">
           <span class="font-bold">{{ floorarea }}</span> m2
         </span>
       {% endif %}
     </div>
     <div class="garage">
       {% if garage %}
-        <span class="inline ml-2">
+        <span class="inline">
           <span class="font-bold">{{ garage }}</span> Garage
         </span>
       {% endif %}
