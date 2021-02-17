@@ -5,13 +5,22 @@
 .paragraph--type--views-reference .views-rows {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   max-width: 1290px;
   margin: 0 auto;
 }
 
 .paragraph--type--views-reference header {
-  max-width: 1263px;
+  max-width: 93%;
   margin: 0 auto;
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .paragraph--type--views-reference header {
+    max-width: 1262px;
+    margin: 0 auto;
+  }
 }
 
 .paragraph--type--views-reference header h3 {
@@ -28,8 +37,22 @@
 }
 
 .paragraph--type--views-reference .views-row {
-  margin-right: 16px;
-  margin-left: 16px;
+  width: 100%;
+  margin: 0 3%;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--views-reference .views-row {
+    width: 45%;
+    margin: 0 1.5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .paragraph--type--views-reference .views-row {
+    width: 30%;
+    margin: 0 1.5%;
+  }
 }
 
 .js-pager__items {
@@ -66,7 +89,7 @@
 /**
  * Testimonial views reference.
  */
- .paragraph--type--views-reference.testimonials header h3 {
+.paragraph--type--views-reference.testimonials header h3 {
   margin-bottom: 40px;
 }
 

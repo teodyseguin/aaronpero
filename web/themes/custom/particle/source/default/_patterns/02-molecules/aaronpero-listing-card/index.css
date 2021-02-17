@@ -1,7 +1,6 @@
 .aaronpero-listing-card {
   height: 577px;
-  width: 388.667px;
-  max-width: 388.667px;
+  width: 100%;
   border-radius: .5rem;
   overflow: hidden;
 }

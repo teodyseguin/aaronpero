@@ -1,4 +1,9 @@
 /**
+ * Global main style.
+ */
+@import "main.css";
+
+/**
  * Node related css files.
  */
 @import "node/page.css";
@@ -13,8 +18,3 @@
  * Views related css files.
  */
 @import "views/listing-available.css";
-
-/**
- * Global main style.
- */
-@import "main.css";
