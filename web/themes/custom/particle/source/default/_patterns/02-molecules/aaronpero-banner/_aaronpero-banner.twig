@@ -30,7 +30,8 @@
   {% set bg = banner_bg %}
 {% endif %}
 
-<div class="aaronpero-banner" style="background-image: url('{{ bg }}')">
+<div class="aaronpero-banner relative" style="background-image: url('')">
+  <img src="{{ bg }}" class="relative lg:absolute lg:right-0" />
   <div class="aaronpero-banner__inner relative">
     <div class="banner-content absolute w-full z-10 mt-16">
       <div class="banner-pretitle text-ultramarineblue uppercase mb-3">

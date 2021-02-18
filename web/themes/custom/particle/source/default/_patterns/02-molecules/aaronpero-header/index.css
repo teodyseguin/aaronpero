@@ -1,5 +1,6 @@
 .aaronpero-header {
-  z-index: 1030px;
+  position: fixed;
+  z-index: 100;
   height: 94px;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 8px rgba(66,75,84,.2);

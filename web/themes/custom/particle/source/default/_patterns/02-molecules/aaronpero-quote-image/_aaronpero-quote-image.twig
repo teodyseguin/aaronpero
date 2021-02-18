@@ -15,9 +15,9 @@
   {% set image_src = image %}
 {% endif %}
 
-<div class="aaronpero-quote-image w-full mb-24">
-  <div class="inner flex relative">
-    <div class="highlight-text w-1/2 self-end mb-10">
+<div class="aaronpero-quote-image w-full mb-24 overflow-hidden">
+  <div class="inner flex flex-wrap lg:flex-nowrap relative container mx-auto">
+    <div class="highlight-text w-full lg:w-1/2 self-end mb-10 mt-24 lg:mt-0 order-2 lg:order-1">
       {% if quote_text %}
         <h4 class="quote-text text-ultramarineblue">
           {{ quote_text }}
@@ -31,8 +31,8 @@
         </h4>
       {% endif %}
     </div>
-    <div class="highlight-img w-1/2">
-      <img src="{{ image_src }}" alt="">
+    <div class="highlight-img w-full lg:w-1/2 order-1 lg:order-2">
+      <img src="{{ image_src }}" alt="" class="mx-auto px-5 lg:px-0">
     </div>
   </div>
 </div>

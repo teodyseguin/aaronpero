@@ -1,11 +1,17 @@
 .aaronpero-jumbotron {
-  background-image: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
 .aaronpero-jumbotron__inner {
-  height: 694px;
+  height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .aaronpero-jumbotron__inner {
+    height: 694px;
+  }
 }
 
 .aaronpero-jumbotron__inner::before {
@@ -23,15 +29,29 @@
 
 .jumbotron-content {
   z-index: 2;
-  margin-top: 146px;
-  max-width: 59.75%;
-  padding: 0 12%;
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 0 6%;
+}
+
+@media screen and (min-width: 992px) {
+  .jumbotron-content {
+    margin-top: 146px;
+    max-width: 59.75%;
+    padding: 0 12%
+  }
 }
 
 .jumbotron-title {
-  font-size: 72px;
+  font-size: 32px;
   font-weight: 900;
   letter-spacing: -1.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron-title {
+    font-size: 72px;
+  }
 }
 
 .pretitle {

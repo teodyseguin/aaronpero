@@ -95013,8 +95013,15 @@ tr {
 }
 
 .banner-content {
-  max-width: 59.75%;
-  padding: 0 10%;
+  max-width: 100%;
+  padding: 0 6%;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-content {
+    max-width: 59.75%;
+    padding: 0 10%;
+  }
 }
 
 .banner-contents p {
@@ -95023,7 +95030,8 @@ tr {
 }
 
 .aaronpero-header {
-  z-index: 1030px;
+  position: fixed;
+  z-index: 100;
   height: 94px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(66,75,84,.2);
@@ -95034,13 +95042,19 @@ div[id*="block-particle-mainnavigation"] {
 }
 
 .aaronpero-jumbotron {
-  background-image: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
 .aaronpero-jumbotron__inner {
-  height: 694px;
+  height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .aaronpero-jumbotron__inner {
+    height: 694px;
+  }
 }
 
 .aaronpero-jumbotron__inner::before {
@@ -95057,15 +95071,29 @@ div[id*="block-particle-mainnavigation"] {
 
 .jumbotron-content {
   z-index: 2;
-  margin-top: 146px;
-  max-width: 59.75%;
-  padding: 0 12%;
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 0 6%;
+}
+
+@media screen and (min-width: 992px) {
+  .jumbotron-content {
+    margin-top: 146px;
+    max-width: 59.75%;
+    padding: 0 12%
+  }
 }
 
 .jumbotron-title {
-  font-size: 72px;
+  font-size: 32px;
   font-weight: 900;
   letter-spacing: -1.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron-title {
+    font-size: 72px;
+  }
 }
 
 .pretitle {
@@ -95126,11 +95154,6 @@ div[id*="block-particle-mainnavigation"] {
   height: 56px;
   z-index: 1;
   background-image: linear-gradient(180deg, rgba(0, 13, 27, 0) 0, rgba(0, 13, 27, .8) 100%);
-}
-
-.aaronpero-quote-image .inner {
-  width: 1500px;
-  margin: 0 auto;
 }
 
 .highlight-text::before {

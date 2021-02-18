@@ -33,7 +33,13 @@
 .front .aaronpero-quote-image {
   position: relative;
   z-index: 1;
-  margin-top: -300px;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .front .aaronpero-quote-image {
+    margin-top: -300px;
+  }
 }
 
 .layout-container.hide-title #block-particle-page-title {
