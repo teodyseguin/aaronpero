@@ -1,5 +1,7 @@
 .paragraph--type--views-reference {
-  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--light-silver);
 }
 
 .paragraph--type--views-reference .views-rows {

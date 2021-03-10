@@ -25,11 +25,11 @@
   {% set image = component.image %}
 {% endif %}
 
-<div class="aaronpero-2-col-image-texts flex w-full mb-24">
+<div class="aaronpero-2-col-image-texts flex w-full mb-24 pt-12">
   <div class="image w-1/2">
     <img src="{{ image }}" alt="">
   </div>
-  <div class="texts w-1/2 font-serif">
+  <div class="texts w-1/2 font-serif pr-64">
     <div class="pretitle uppercase text-ultramarineblue w-full">
       {{ pretitle }}
     </div>
@@ -50,6 +50,21 @@
     </div>
     <div class="services w-full font-serif">
       <h5>What we can give you</h5>
+
+      {% if features %}
+        <div class="mt-10 grid grid-flow-row grid-cols-2 gap-4">
+          {% for feature in features %}
+            <div>
+              <span class="inline-block">
+                {{ feature['icon']|raw }}
+              </span>
+              <span class="inline-block">
+                {{ feature['name'] }}
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

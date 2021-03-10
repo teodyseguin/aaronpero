@@ -15,7 +15,7 @@
   {% set card_image = image %}
 {% endif %}
 
-<a href="/node/{{ nid }}" class="text-black block aaronpero-listing-card hover:shadow-lg cursor-pointer rounded mb-20">
+<a href="/node/{{ nid }}" class="text-black block bg-white aaronpero-listing-card hover:shadow-lg cursor-pointer rounded mb-20 pb-10">
   <div class="relative card-image w-full bg-gray-500" style="background-image: url('{{ card_image }}');">
     <div class="card-date absolute text-white font-black">
       {% if status == 'Sold' %}

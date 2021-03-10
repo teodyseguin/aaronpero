@@ -53,3 +53,27 @@ export function enable($context, { aaronperoHeader = {} }) {
 }
 
 export default enable;
+
+(function aaronperoHeader() {
+  $(document).ready(function documentReady() {
+    if ($(window).scrollTop() > 94) {
+      $('.aaronpero-header').addClass('animated fadeInDown');
+    } else {
+      $('.aaronpero-header').removeClass('animated fadeInDown');
+    }
+  });
+
+  $(window).on('scroll', function windowReady() {
+    if ($(window).scrollTop() > 94) {
+      $('.aaronpero-header').addClass('animated fadeInDown');
+    } else {
+      $('.aaronpero-header').removeClass('animated fadeInDown');
+    }
+  });
+})();
+
+// (".top-nav__mobile").removeClass("show"),
+// ("html").removeClass("html-hidden"))})
+// (window).scrollTop()>94?
+// (".top-nav").addClass("animated fadeInDown"):e(".top-nav").removeClass("animated fadeInDown"),
+// e(window).on("scroll",function(){e(window).

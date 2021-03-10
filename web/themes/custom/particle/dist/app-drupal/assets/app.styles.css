@@ -94980,7 +94980,6 @@ tr {
 
 .aaronpero-banner {
   height: 437px;
-  margin-bottom: 104px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -95104,10 +95103,11 @@ div[id*="block-particle-mainnavigation"] {
 }
 
 .aaronpero-listing-card {
-  height: 577px;
+  height: auto;
   width: 100%;
   border-radius: .5rem;
   overflow: hidden;
+  transition: .3s;
 }
 
 .card-image {
